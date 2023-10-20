@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed;
+    private GameManager manager;
+
+    private float speed;
     private Rigidbody2D rb;
     private Vector3 startPosition;
 
@@ -16,20 +18,26 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
-        Launch();
+        manager = GameManager._instance;
+        StartCoroutine(LaunchDelay());
     }
 
-    private void Launch()
+    public void SetBallSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+
+    public void Launch()
     {
         float x = Random.Range(0, 2) == 0 ? -1 : 1;
         float y = Random.Range(0, 2) == 0 ? -1 : 1;
         rb.velocity = new Vector2(speed * x, speed * y);
     }
 
-    public void Reset()
+    IEnumerator LaunchDelay()
     {
-        rb.velocity = Vector2.zero;
-        transform.position = startPosition;
+        yield return new WaitForSeconds(0.5f);
+
         Launch();
     }
 }
