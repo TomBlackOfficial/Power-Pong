@@ -7,5 +7,6 @@ public class Gamemode : ScriptableObject
 {
     public string gameModeName = "NewGamemode";
     public int scoreToWin = 7;
-    public float startingBallSpeed = 5;
+    public float startingBallSpeed = 4;
+    public float startingPaddleSpeed = 5;
 }

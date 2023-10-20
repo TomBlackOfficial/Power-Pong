@@ -7,7 +7,7 @@ public class Paddle : MonoBehaviour
     private GameManager manager;
 
     public bool isPlayer1;
-    public float speed = 5;
+    private float speed = 5;
 
     private Vector3 startPosition;
     private Rigidbody2D rb;
@@ -24,6 +24,7 @@ public class Paddle : MonoBehaviour
     private void Start()
     {
         manager = GameManager._instance;
+        SetSpeed(manager.gamemode.startingPaddleSpeed);
     }
 
     private void Update()
@@ -49,5 +50,10 @@ public class Paddle : MonoBehaviour
     public void StartRound()
     {
         paralized = false;
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
     }
 }

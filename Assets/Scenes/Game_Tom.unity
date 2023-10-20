@@ -174,7 +174,7 @@ PrefabInstance:
     - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: gamemode
       value: 
-      objectReference: {fileID: 11400000, guid: f96af20163d684f0482805b1c2f678d9, type: 2}
+      objectReference: {fileID: 11400000, guid: ef14b714ccfb640bd82c7fc4b88a3d0e, type: 2}
     - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: player1Goal
       value: 
