@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public abstract class ModifierParent : ScriptableObject
+public abstract class ModifierParent : MonoBehaviour
 {
     public enum ModifierRarity
     {
@@ -13,10 +13,12 @@ public abstract class ModifierParent : ScriptableObject
         Legendary,
         Mystic
     }
+    [Header("Base Variable")]
     public ModifierRarity rarity;
     public string modifierName;
     public string description;
     public Image icon;
+    public bool unique;
     protected virtual void Start()
     {
         

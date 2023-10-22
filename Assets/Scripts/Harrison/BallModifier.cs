@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Modifier", menuName = "Modifiers/Ball Modifier")]
 public class BallModifier : ModifierParent
 {
     [Header("Ball Stats")]
-    public List<Ball> _ball = new List<Ball>();
-    public float _ballSpeedAdd = 0;
-    public float _ballSpeedMult = 1;
-    public int _ballSizeAdjustmentAdd = 0;
-    public int _ballSizeAdjustmentMult = 1;
+    public List<Ball> ball = new List<Ball>();
+    public float ballSpeedAdd = 0;
+    public float ballSpeedMult = 1;
+    public int ballSizeAdjustmentAdd = 0;
+    public int ballSizeAdjustmentMult = 1;
     protected override void Start()
     {
         base.Start();
@@ -18,11 +17,11 @@ public class BallModifier : ModifierParent
     }
     public void UpdateBallList()
     {
-        _ball.Clear();
-        Ball[] ball = FindObjectsByType<Ball>(FindObjectsSortMode.None);
-        for (int b = 0; b < ball.Length; b++)
+        ball.Clear();
+        Ball[] ballArray = FindObjectsByType<Ball>(FindObjectsSortMode.None);
+        for (int b = 0; b < ballArray.Length; b++)
         {
-            _ball.Add(ball[b]);
+            ball.Add(ballArray[b]);
         }
     }
 }
