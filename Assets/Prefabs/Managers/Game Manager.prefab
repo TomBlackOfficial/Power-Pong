@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6a4f86647654bfcbd97884bad174f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamemode: {fileID: 11400000, guid: f96af20163d684f0482805b1c2f678d9, type: 2}
   ballPrefab: {fileID: 7476110331775010831, guid: be07a624521e048cb88ef211771f6562, type: 3}
   ball: {fileID: 0}
   player1Paddle: {fileID: 0}

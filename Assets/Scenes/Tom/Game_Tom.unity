@@ -172,10 +172,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
-      propertyPath: gamemode
-      value: 
-      objectReference: {fileID: 11400000, guid: ef14b714ccfb640bd82c7fc4b88a3d0e, type: 2}
-    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: player1Goal
       value: 
       objectReference: {fileID: 1665305782}
@@ -262,7 +258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2824751094597927794, guid: d103d322115954e94b66f6d4793cf11a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3486295552632344096, guid: d103d322115954e94b66f6d4793cf11a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -363,19 +359,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.007692308
+      value: 0.21818183
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.11904763
+      value: 0.023809524
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.98461545
+      value: 0.56304985
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.7619048
+      value: 0.952381
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -393,14 +389,6 @@ PrefabInstance:
     - target: {fileID: 1809476593978542954, guid: 8cfc346378f2f4bc08f31ff3c4348075, type: 3}
       propertyPath: m_Name
       value: Player 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450217318847586219, guid: 8cfc346378f2f4bc08f31ff3c4348075, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450217318847586219, guid: 8cfc346378f2f4bc08f31ff3c4348075, type: 3}
-      propertyPath: m_Color.g
-      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4589793904852695267, guid: 8cfc346378f2f4bc08f31ff3c4348075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -624,13 +612,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8418090617986739583, guid: a19e912c4078f4bafb6290d1374a4308, type: 3}
-      propertyPath: m_Color.g
-      value: 0.7058824
-      objectReference: {fileID: 0}
-    - target: {fileID: 8418090617986739583, guid: a19e912c4078f4bafb6290d1374a4308, type: 3}
-      propertyPath: m_Color.r
-      value: 0
+    - target: {fileID: 8937128172750525897, guid: a19e912c4078f4bafb6290d1374a4308, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
