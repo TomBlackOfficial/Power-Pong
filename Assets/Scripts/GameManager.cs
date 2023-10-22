@@ -6,8 +6,21 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager _instance;
 
+    public enum GameStates
+    {
+        Playing,
+        Paused,
+        GameOver
+    }
+
+    public GameStates currentGameState { get; private set; } = GameStates.Paused;
+
+    [Header("Settings")]
+    public Gamemode gamemode;
+
     [Header("Ball")]
-    public Ball ball;
+    [SerializeField] private Ball ballPrefab;
+    [HideInInspector] public Ball ball;
 
     [Header("Player 1")]
     public Paddle player1Paddle;
@@ -17,9 +30,10 @@ public class GameManager : MonoBehaviour
     public Paddle player2Paddle;
     public Goal player2Goal;
 
-    [Header("Score UI")]
+    [Header("UI")]
     public TextMesh player1Text;
     public TextMesh player2Text;
+    public Animator cooldownAnim;
 
     private int player1Score;
     private int player2Score;
@@ -29,11 +43,17 @@ public class GameManager : MonoBehaviour
         _instance = this;
     }
 
+    private void Start()
+    {
+        StartCountdown();
+    }
+
     public void PlayerScored(int playerID)
     {
         if (playerID != 1 && playerID != 2)
             return;
 
+        // Checking which player won the round
         if (playerID == 1)
         {
             player1Score++;
@@ -45,13 +65,66 @@ public class GameManager : MonoBehaviour
             player2Text.text = player2Score.ToString();
         }
 
-        ResetPosition();
+        CheckWinCondition();
+    }
+
+    private void CheckWinCondition()
+    {
+        // If scoreToWin is set to 0 it means the game is infinite
+        if (gamemode.scoreToWin > 0)
+        {
+            // Check to see if either player won the game
+            if (player1Score >= gamemode.scoreToWin)
+            {
+                GameOver(1);
+                return;
+            }
+            else if (player2Score >= gamemode.scoreToWin)
+            {
+                GameOver(2);
+                return;
+            }
+        }
+
+        // If no one won the game then continue
+        StartCountdown();
+    }
+
+    private void GameOver(int winnerID)
+    {
+        if (winnerID != 1 && winnerID != 2)
+            return;
+
+        currentGameState = GameStates.GameOver;
+        Debug.Log("Player " + winnerID + " is the winner!");
     }
 
     private void ResetPosition()
     {
-        ball.Reset();
         player1Paddle.Reset();
         player2Paddle.Reset();
+    }
+
+    private void StartCountdown()
+    {
+        currentGameState = GameStates.Paused;
+
+        ResetPosition();
+        cooldownAnim.Play("Countdown");
+    }
+
+    public void StartRound()
+    {
+        currentGameState = GameStates.Playing;
+
+        SpawnBall();
+        player1Paddle.StartRound();
+        player2Paddle.StartRound();
+    }
+
+    private void SpawnBall()
+    {
+        ball = Instantiate(ballPrefab, Vector3.zero, Quaternion.identity).GetComponent<Ball>();
+        ball.SetBallSpeed(gamemode.startingBallSpeed);
     }
 }

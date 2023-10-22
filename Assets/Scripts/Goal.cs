@@ -20,6 +20,8 @@ public class Goal : MonoBehaviour
                 Debug.Log("Player 1 Scored!");
                 GameManager._instance.PlayerScored(1);
             }
+
+            Destroy(collision.gameObject);
         }
     }
 }

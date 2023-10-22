@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
+    private GameManager manager;
+
     public bool isPlayer1;
-    public float speed = 5;
+    private float speed = 5;
 
     private Vector3 startPosition;
     private Rigidbody2D rb;
     private float movement;
 
+    private bool paralized = true;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
+    }
+
+    private void Start()
+    {
+        manager = GameManager._instance;
+        SetSpeed(manager.gamemode.startingPaddleSpeed);
     }
 
     private void Update()
@@ -32,7 +42,18 @@ public class Paddle : MonoBehaviour
 
     public void Reset()
     {
+        paralized = true;
         rb.velocity = Vector2.zero;
         transform.position = startPosition;
+    }
+
+    public void StartRound()
+    {
+        paralized = false;
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
     }
 }
