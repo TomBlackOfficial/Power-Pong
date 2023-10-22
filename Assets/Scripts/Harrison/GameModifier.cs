@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Modifier", menuName = "Modifiers/Game Modifier")]
 public class GameModifier : ModifierParent
 {
+    [Header("Game Stats")]
+    public GameManager _manager;
     [Header("Player Stats")]
     public Paddle[] _player = new Paddle[2];
     public float _playerSpeedAdd = 0;
