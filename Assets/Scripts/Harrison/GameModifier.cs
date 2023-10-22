@@ -14,21 +14,19 @@ public class GameModifier : ModifierParent
     public GameManager manager;
     public PlayerToAffect playerToAffect;
     [Header("Player Stats")]
-    public Paddle[] player = new Paddle[2];
-    public float playerSpeedAdd = 0;
-    public float playerSpeedMult = 1;
-    public int playerHeightAdjustmentAdd = 0;
-    public int playerHeightAdjustmentMult = 1;
+    public GameObject playerModifier;
     [Header("Ball Stats")]
-    public List<Ball> ball = new List<Ball>();
-    public float ballSpeedAdd = 0;
-    public float ballSpeedMult = 1;
-    public int ballSizeAdjustmentAdd = 0;
-    public int ballSizeAdjustmentMult = 1;
+    public GameObject ballModifier;
 
 
     protected override void Start()
     {
         base.Start();
+    }
+
+    public override void StartModifierEffect()
+    {
+        base.StartModifierEffect();
+        manager = GetComponentInParent<GameManager>();
     }
 }

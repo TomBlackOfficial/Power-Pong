@@ -24,8 +24,14 @@ public abstract class ModifierParent : MonoBehaviour
         
     }
 
-    protected virtual void UpdateModifierComponents()
+    public virtual void StartModifierEffect()
     {
-
+        //paddleList.Add(this);
     }
+    /*
+    GameObject GO = Instantiate(Prefab, parent.tranform);
+    GO.transform.parent = parent.transform;
+    GO.GetComponent<ModifierParent>().StartModifierEffect();
+    list.Add(GO);
+    */
 }

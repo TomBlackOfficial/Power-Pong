@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallModifier : ModifierParent
 {
     [Header("Ball Stats")]
-    public List<Ball> ball = new List<Ball>();
+    public Ball myBall;
     public float ballSpeedAdd = 0;
     public float ballSpeedMult = 1;
     public int ballSizeAdjustmentAdd = 0;
@@ -13,15 +13,11 @@ public class BallModifier : ModifierParent
     protected override void Start()
     {
         base.Start();
-        UpdateBallList();
     }
-    public void UpdateBallList()
+
+    public override void StartModifierEffect()
     {
-        ball.Clear();
-        Ball[] ballArray = FindObjectsByType<Ball>(FindObjectsSortMode.None);
-        for (int b = 0; b < ballArray.Length; b++)
-        {
-            ball.Add(ballArray[b]);
-        }
+        base.StartModifierEffect();
+        myBall = GetComponentInParent<Ball>();
     }
 }

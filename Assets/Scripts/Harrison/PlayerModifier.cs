@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaddleModifier : ModifierParent
+public class PlayerModifier : ModifierParent
 {
     public enum PlayerToAffect
     {
@@ -21,5 +21,11 @@ public class PaddleModifier : ModifierParent
     protected override void Start()
     {
         base.Start();
+    }
+
+    public override void StartModifierEffect()
+    {
+        base.StartModifierEffect();
+        player = GetComponentInParent<Paddle>();
     }
 }
