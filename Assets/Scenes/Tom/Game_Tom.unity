@@ -357,22 +357,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0.21818183
-      objectReference: {fileID: 0}
-    - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0.023809524
-      objectReference: {fileID: 0}
-    - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.56304985
-      objectReference: {fileID: 0}
-    - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.952381
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
