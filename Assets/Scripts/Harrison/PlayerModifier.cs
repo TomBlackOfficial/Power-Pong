@@ -16,12 +16,7 @@ public class PlayerModifier : ModifierParent
     public float playerSpeedAdd = 0;
     public float playerSpeedMult = 1;
     public int playerHeightAdjustmentAdd = 0;
-    public int playerHeightAdjustmentMult = 1;
-
-    protected override void Start()
-    {
-        base.Start();
-    }
+    public float playerHeightAdjustmentMult = 1;
 
     public override void StartModifierEffect()
     {

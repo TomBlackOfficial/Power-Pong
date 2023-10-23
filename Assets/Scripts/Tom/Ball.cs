@@ -6,9 +6,10 @@ public class Ball : MonoBehaviour
 {
     private GameManager manager;
 
-    private float speed;
+    public float speed { get; private set; }
     private Rigidbody2D rb;
     private Vector3 startPosition;
+    private Vector2 minMaxSpeed = new Vector2(1, 10);
 
     private void Awake()
     {
@@ -24,7 +25,7 @@ public class Ball : MonoBehaviour
 
     public void SetBallSpeed(float newSpeed)
     {
-        speed = newSpeed;
+        speed = Mathf.Clamp(newSpeed, minMaxSpeed.x, minMaxSpeed.y);
     }
 
     public void Launch()
