@@ -40,4 +40,12 @@ public class Ball : MonoBehaviour
 
         Launch();
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            SetBallSpeed(speed + 0.5f);
+        }
+    }
 }
