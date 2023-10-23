@@ -7,7 +7,14 @@ public class Paddle : MonoBehaviour
     private GameManager manager;
 
     public bool isPlayer1;
+
+    [SerializeField] private GameObject sprite;
+
     private float speed = 5;
+    private int height = 20;
+
+    private Vector2 minMaxSpeed = new Vector2(1, 20);
+    private Vector2 minMaxHeight = new Vector2(2, 40);
 
     private Vector3 startPosition;
     private Rigidbody2D rb;
@@ -54,6 +61,12 @@ public class Paddle : MonoBehaviour
 
     public void SetSpeed(float newSpeed)
     {
-        speed = newSpeed;
+        speed = Mathf.Clamp(newSpeed, minMaxSpeed.x, minMaxSpeed.y);
+    }
+
+    public void SetPaddleHeight(int newHeight)
+    {
+        height = (int)Mathf.Clamp(newHeight, minMaxHeight.x, minMaxHeight.y);
+        sprite.transform.localScale = new Vector3(1, height, 1);
     }
 }
