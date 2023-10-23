@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4484879012421877145}
   - component: {fileID: 7506924147291606701}
   m_Layer: 0
-  m_Name: Mod_SlowBall
+  m_Name: BMod_SnailBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082eeeb1173ef944da464ec8784cfef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
-  modifierName: Slow Ball
-  description: Cut the ball's speed in half.
+  rarity: 1
+  modifierName: Snail Ball
+  description: Cut the ball's speed in half
   icon: {fileID: 0}
   unique: 0
   activateable: 0
