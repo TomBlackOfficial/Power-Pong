@@ -18,12 +18,6 @@ public class GameModifier : ModifierParent
     [Header("Ball Stats")]
     public GameObject ballModifier;
 
-
-    protected override void Start()
-    {
-        base.Start();
-    }
-
     public override void StartModifierEffect()
     {
         base.StartModifierEffect();

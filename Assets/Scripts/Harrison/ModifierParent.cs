@@ -19,13 +19,16 @@ public abstract class ModifierParent : MonoBehaviour
     public string description;
     public Image icon;
     public bool unique;
-    protected virtual void Start()
+    public bool activateable;
+
+    public virtual void ActivateAbility()
     {
-        
+
     }
 
     public virtual void StartModifierEffect()
     {
+        Debug.Log("Parent Call");
         //paddleList.Add(this);
     }
     /*

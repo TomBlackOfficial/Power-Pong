@@ -9,15 +9,11 @@ public class BallModifier : ModifierParent
     public float ballSpeedAdd = 0;
     public float ballSpeedMult = 1;
     public int ballSizeAdjustmentAdd = 0;
-    public int ballSizeAdjustmentMult = 1;
-    protected override void Start()
-    {
-        base.Start();
-    }
-
+    public float ballSizeAdjustmentMult = 1;
     public override void StartModifierEffect()
     {
         base.StartModifierEffect();
+        Debug.Log("Ball");
         myBall = GetComponentInParent<Ball>();
     }
 }
