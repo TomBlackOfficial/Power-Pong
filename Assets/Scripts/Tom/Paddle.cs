@@ -22,6 +22,9 @@ public class Paddle : MonoBehaviour
 
     private bool paralized = true;
 
+    private List<ModifierParent> normalModifiers = new List<ModifierParent>();
+    private List<ModifierParent> activateModifiers = new List<ModifierParent>();
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,15 +39,35 @@ public class Paddle : MonoBehaviour
 
     private void Update()
     {
+        bool activate = false;
         if (isPlayer1)
         {
             movement = Input.GetAxisRaw("Vertical_P1");
+            if (Input.GetAxisRaw("Action_P1") != 0)
+            {
+                activate = true;
+            }
         }
         else
         {
             movement = Input.GetAxisRaw("Vertical_P2");
+            if (Input.GetAxisRaw("Action_P2") != 0)
+            {
+                activate = true;
+            }
         }
         rb.velocity = new Vector2(0, movement * speed);
+
+        if (activate)
+        {
+            if (activateModifiers.Count > 0)
+            {
+                for (int a = 0; a < activateModifiers.Count; a++)
+                {
+                    activateModifiers[a].ActivateAbility();
+                }
+            }
+        }
     }
 
     public void Reset()
@@ -68,5 +91,29 @@ public class Paddle : MonoBehaviour
     {
         height = (int)Mathf.Clamp(newHeight, minMaxHeight.x, minMaxHeight.y);
         sprite.transform.localScale = new Vector3(1, height, 1);
+    }
+
+    public void AddModifier(GameObject modifier)
+    {
+        GameObject thisObject = Instantiate(modifier, this.transform);
+        thisObject.transform.parent = this.gameObject.transform;
+        ModifierParent mod;
+        if (TryGetComponent<ModifierParent>(out mod))
+        {
+            if (mod.activateable)
+            {
+                activateModifiers.Add(mod);
+            }
+            else
+            {
+                normalModifiers.Add(mod);
+            }
+            mod.StartModifierEffect();
+        }
+        else
+        {
+            Destroy(thisObject);
+            Debug.LogError("Non modifier was trying to be added as a modifier.");
+        }
     }
 }
