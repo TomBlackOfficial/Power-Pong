@@ -13,12 +13,12 @@ public class Goal : MonoBehaviour
             if (isPlayer1Goal)
             {
                 Debug.Log("Player 2 Scored!");
-                GameManager._instance.PlayerScored(2);
+                GameManager.instance.PlayerScored(2);
             }
             else
             {
                 Debug.Log("Player 1 Scored!");
-                GameManager._instance.PlayerScored(1);
+                GameManager.instance.PlayerScored(1);
             }
 
             Destroy(collision.gameObject);

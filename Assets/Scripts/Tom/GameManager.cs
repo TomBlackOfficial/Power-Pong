@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager _instance;
+    public static GameManager instance;
 
     public enum GameStates
     {
@@ -25,10 +25,12 @@ public class GameManager : MonoBehaviour
     [Header("Player 1")]
     public Paddle player1Paddle;
     public Goal player1Goal;
+    [SerializeField] private GameObject p1Modifier;
 
     [Header("Player 2")]
     public Paddle player2Paddle;
     public Goal player2Goal;
+    [SerializeField] private GameObject p2Modifier;
 
     [Header("UI")]
     public TextMesh player1Text;
@@ -40,12 +42,14 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        _instance = this;
+        instance = this;
     }
 
     private void Start()
     {
         StartCountdown();
+        player1Paddle.AddModifier(p1Modifier);
+        player2Paddle.AddModifier(p2Modifier);
     }
 
     public void PlayerScored(int playerID)

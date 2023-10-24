@@ -258,6 +258,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: p1Modifier
+      value: 
+      objectReference: {fileID: 816191153775275882, guid: c843650a1e6047c4a9f5e96c2128f19b, type: 3}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: p2Modifier
+      value: 
+      objectReference: {fileID: 546931955698597421, guid: a703ffce35d5d0342b0c0114a651e956, type: 3}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: player1Goal
       value: 
       objectReference: {fileID: 1064231111}

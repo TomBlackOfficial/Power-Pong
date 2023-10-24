@@ -19,7 +19,7 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
-        manager = GameManager._instance;
+        manager = GameManager.instance;
         StartCoroutine(LaunchDelay());
     }
 

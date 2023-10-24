@@ -33,7 +33,7 @@ public class Paddle : MonoBehaviour
 
     private void Start()
     {
-        manager = GameManager._instance;
+        manager = GameManager.instance;
         SetSpeed(manager.gamemode.startingPaddleSpeed);
     }
 
@@ -97,8 +97,8 @@ public class Paddle : MonoBehaviour
     {
         GameObject thisObject = Instantiate(modifier, this.transform);
         thisObject.transform.parent = this.gameObject.transform;
-        ModifierParent mod;
-        if (TryGetComponent<ModifierParent>(out mod))
+        PlayerModifier mod;
+        if (thisObject.TryGetComponent<PlayerModifier>(out mod))
         {
             if (mod.activateable)
             {
@@ -113,7 +113,7 @@ public class Paddle : MonoBehaviour
         else
         {
             Destroy(thisObject);
-            Debug.LogError("Non modifier was trying to be added as a modifier.");
+            Debug.LogError("Non player modifier was trying to be added as a modifier.");
         }
     }
 }

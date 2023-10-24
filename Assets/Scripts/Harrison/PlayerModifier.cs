@@ -25,11 +25,12 @@ public class PlayerModifier : ModifierParent
         List<Paddle> paddlesToEffect = new List<Paddle>();
         switch (playerToAffect)
         {
-            case PlayerToAffect.ChoosingPlayer:
-                break;
-            case PlayerToAffect.OposingPlayer:
-                break;
             case PlayerToAffect.BothPlayers:
+                paddlesToEffect.Add(GameManager.instance.player1Paddle);
+                paddlesToEffect.Add(GameManager.instance.player2Paddle);
+                break;
+            default:
+                paddlesToEffect.Add(player);
                 break;
         }
         for (int p = 0; p < paddlesToEffect.Count; p++)
