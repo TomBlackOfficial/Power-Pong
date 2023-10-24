@@ -621,13 +621,13 @@ TextMesh:
   m_CorrespondingSourceObject: {fileID: 8883699925928021336, guid: 9916d11c13ff24bc7927c134a4fe13a6, type: 3}
   m_PrefabInstance: {fileID: 1153822339}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3152512892039597704
+--- !u!4 &5571733385059148546
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6280974357885811250}
+  m_GameObject: {fileID: 6694978411308926060}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.26297593, y: -0.3174555, z: -0.009854063}
@@ -636,7 +636,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6280974357885811250
+--- !u!114 &6110846381477695215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6694978411308926060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b19fcf17de6f9b408c5efc87b097420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rarity: 1
+  modifierName: Large Paddle
+  description: Get a little fatter
+  icon: {fileID: 0}
+  unique: 0
+  activateable: 0
+  playerToAffect: 0
+  player: {fileID: 0}
+  playerSpeedAdd: 0
+  playerSpeedMult: 0.85
+  playerHeightAdjustmentAdd: 2
+  playerHeightAdjustmentMult: 1.15
+--- !u!1 &6694978411308926060
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -644,39 +668,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3152512892039597704}
-  - component: {fileID: 7661635006289003097}
+  - component: {fileID: 5571733385059148546}
+  - component: {fileID: 6110846381477695215}
   m_Layer: 0
-  m_Name: PMod_SmallerPaddle
+  m_Name: PMod_LargePaddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7661635006289003097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6280974357885811250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b19fcf17de6f9b408c5efc87b097420, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rarity: 1
-  modifierName: Faster Paddle
-  description: Sabotage your opponent by making their paddle smaller.
-  icon: {fileID: 0}
-  unique: 0
-  activateable: 0
-  playerToAffect: 1
-  player: {fileID: 0}
-  playerSpeedAdd: 0
-  playerSpeedMult: 1
-  playerHeightAdjustmentAdd: 0
-  playerHeightAdjustmentMult: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -688,4 +688,4 @@ SceneRoots:
   - {fileID: 1838268343}
   - {fileID: 1701067323}
   - {fileID: 315542861}
-  - {fileID: 3152512892039597704}
+  - {fileID: 5571733385059148546}

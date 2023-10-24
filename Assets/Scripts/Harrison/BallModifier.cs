@@ -13,7 +13,9 @@ public class BallModifier : ModifierParent
     public override void StartModifierEffect()
     {
         base.StartModifierEffect();
-        Debug.Log("Ball");
         myBall = GetComponentInParent<Ball>();
+        float newSpeed = (myBall.speed + ballSpeedAdd) * ballSpeedMult;
+        myBall.SetBallSpeed(newSpeed);
+        //int newSize = (int)((float)(myBall.size + ballSizeAdjustmentAdd) * ballSizeAdjustmentMult);
     }
 }

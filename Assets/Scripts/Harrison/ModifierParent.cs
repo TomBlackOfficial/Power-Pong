@@ -28,7 +28,6 @@ public abstract class ModifierParent : MonoBehaviour
 
     public virtual void StartModifierEffect()
     {
-        Debug.Log("Parent Call");
         //paddleList.Add(this);
     }
     /*

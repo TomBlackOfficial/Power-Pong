@@ -10,8 +10,8 @@ public class Paddle : MonoBehaviour
 
     [SerializeField] private GameObject sprite;
 
-    private float speed = 5;
-    private int height = 20;
+    public float speed { get; private set; } = 5;
+    public int height { get; private set; } = 20;
 
     private Vector2 minMaxSpeed = new Vector2(1, 20);
     private Vector2 minMaxHeight = new Vector2(2, 40);

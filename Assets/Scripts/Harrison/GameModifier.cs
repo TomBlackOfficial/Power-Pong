@@ -22,5 +22,15 @@ public class GameModifier : ModifierParent
     {
         base.StartModifierEffect();
         manager = GetComponentInParent<GameManager>();
+        List<Paddle> paddlesToEffect = new List<Paddle>();
+        switch (playerToAffect)
+        {
+            case PlayerToAffect.ChoosingPlayer:
+                break;
+            case PlayerToAffect.OposingPlayer:
+                break;
+            case PlayerToAffect.BothPlayers:
+                break;
+        }
     }
 }

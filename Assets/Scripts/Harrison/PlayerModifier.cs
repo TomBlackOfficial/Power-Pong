@@ -22,5 +22,22 @@ public class PlayerModifier : ModifierParent
     {
         base.StartModifierEffect();
         player = GetComponentInParent<Paddle>();
+        List<Paddle> paddlesToEffect = new List<Paddle>();
+        switch (playerToAffect)
+        {
+            case PlayerToAffect.ChoosingPlayer:
+                break;
+            case PlayerToAffect.OposingPlayer:
+                break;
+            case PlayerToAffect.BothPlayers:
+                break;
+        }
+        for (int p = 0; p < paddlesToEffect.Count; p++)
+        {
+            float newSpeed = (paddlesToEffect[p].speed + playerSpeedAdd) * playerSpeedMult;
+            paddlesToEffect[p].SetSpeed(newSpeed);
+            int newHeight = (int)((float)(paddlesToEffect[p].height + playerHeightAdjustmentAdd) * playerHeightAdjustmentMult);
+            paddlesToEffect[p].SetPaddleHeight(newHeight);
+        }
     }
 }
