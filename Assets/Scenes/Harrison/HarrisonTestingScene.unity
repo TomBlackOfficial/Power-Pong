@@ -289,6 +289,38 @@ PrefabInstance:
       propertyPath: player2Paddle
       value: 
       objectReference: {fileID: 610283777}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: p1Modifier.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: p2Modifier.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: ballModifiers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: 'p1Modifier.Array.data[0]'
+      value: 
+      objectReference: {fileID: 546931955698597421, guid: a703ffce35d5d0342b0c0114a651e956, type: 3}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: 'p1Modifier.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5874604283515160268, guid: 5b4bf4ba6fc40bb4090808bac0566ba5, type: 3}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: 'p2Modifier.Array.data[0]'
+      value: 
+      objectReference: {fileID: 816191153775275882, guid: c843650a1e6047c4a9f5e96c2128f19b, type: 3}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: 'p2Modifier.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2583138248003492100, guid: 29e3856b11f8d2745bd8458ecc1cfaff, type: 3}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: 'ballModifiers.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4939051390042414249, guid: df86f6f1d7fefe046bae3b062fe2cb6d, type: 3}
     - target: {fileID: 5122752482957328812, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: m_Name
       value: Game Manager

@@ -22,8 +22,8 @@ public class Paddle : MonoBehaviour
 
     private bool paralized = true;
 
-    private List<ModifierParent> normalModifiers = new List<ModifierParent>();
-    private List<ModifierParent> activateModifiers = new List<ModifierParent>();
+    private List<PlayerModifier> normalModifiers = new List<PlayerModifier>();
+    private List<PlayerModifier> activateModifiers = new List<PlayerModifier>();
 
     private void Awake()
     {

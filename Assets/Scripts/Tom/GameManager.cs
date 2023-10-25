@@ -21,16 +21,17 @@ public class GameManager : MonoBehaviour
     [Header("Ball")]
     [SerializeField] private Ball ballPrefab;
     [HideInInspector] public Ball ball;
+    [SerializeField] private List<GameObject> ballModifiers = new List<GameObject>();
 
     [Header("Player 1")]
     public Paddle player1Paddle;
     public Goal player1Goal;
-    [SerializeField] private GameObject p1Modifier;
+    [SerializeField] private List<GameObject> p1Modifier = new List<GameObject>();
 
     [Header("Player 2")]
     public Paddle player2Paddle;
     public Goal player2Goal;
-    [SerializeField] private GameObject p2Modifier;
+    [SerializeField] private List<GameObject> p2Modifier = new List<GameObject>();
 
     [Header("UI")]
     public TextMesh player1Text;
@@ -48,8 +49,14 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         StartCountdown();
-        player1Paddle.AddModifier(p1Modifier);
-        player2Paddle.AddModifier(p2Modifier);
+        for (int p1m = 0; p1m < p1Modifier.Count; p1m++)
+        {
+            player1Paddle.AddModifier(p1Modifier[p1m]);
+        }
+        for (int p2m = 0; p2m < p2Modifier.Count; p2m++)
+        {
+            player2Paddle.AddModifier(p2Modifier[p2m]);
+        }
     }
 
     public void PlayerScored(int playerID)
@@ -130,5 +137,9 @@ public class GameManager : MonoBehaviour
     {
         ball = Instantiate(ballPrefab, Vector3.zero, Quaternion.identity).GetComponent<Ball>();
         ball.SetBallSpeed(gamemode.startingBallSpeed);
+        for (int b = 0; b < ballModifiers.Count; b++)
+        {
+            ball.AddModifier(ballModifiers[b], player1Paddle);
+        }
     }
 }
