@@ -61,7 +61,7 @@ public class Ball : MonoBehaviour
         }
     }
 
-    public void AddModifier(GameObject modifier, Paddle paddle)
+    public void AddModifier(GameObject modifier, Paddle paddle = null)
     {
         GameObject thisObject = Instantiate(modifier, this.transform);
         thisObject.transform.parent = this.gameObject.transform;
@@ -70,6 +70,12 @@ public class Ball : MonoBehaviour
         {
             if (mod.activateable)
             {
+                if (paddle == null)
+                {
+                    Debug.LogError("Trying to add a modifier with an activatable ability without assigning a player.");
+                    Destroy(thisObject);
+                    return;
+                }
                 activateModifiers.Add(mod, paddle.isPlayer1);
             }
             else
@@ -81,7 +87,7 @@ public class Ball : MonoBehaviour
         else
         {
             Destroy(thisObject);
-            Debug.LogError("Non player modifier was trying to be added as a modifier.");
+            Debug.LogError("Non Ball modifier was trying to be added as a modifier.");
         }
     }
 }

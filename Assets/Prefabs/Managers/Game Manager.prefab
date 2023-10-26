@@ -160,6 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5622107270330712331}
   - component: {fileID: 844492361283906798}
+  - component: {fileID: 5319193525307417449}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -198,13 +199,44 @@ MonoBehaviour:
   gamemode: {fileID: 11400000, guid: f96af20163d684f0482805b1c2f678d9, type: 2}
   ballPrefab: {fileID: 7476110331775010831, guid: be07a624521e048cb88ef211771f6562, type: 3}
   ball: {fileID: 0}
+  ballModifiers: []
   player1Paddle: {fileID: 0}
   player1Goal: {fileID: 0}
+  p1Modifier: []
   player2Paddle: {fileID: 0}
   player2Goal: {fileID: 0}
+  p2Modifier: []
   player1Text: {fileID: 0}
   player2Text: {fileID: 0}
   cooldownAnim: {fileID: 5875450827092675899}
+--- !u!114 &5319193525307417449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5122752482957328812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c03564f019d7a499a05f087d869f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterList:
+  - {fileID: 8681619465461374060, guid: 4cec5baa47faf3f4683441fd1510f614, type: 3}
+  - {fileID: 3125498024027570722, guid: 7f61f51d56e420440b23bd90edb9ae04, type: 3}
+  - {fileID: 4939051390042414249, guid: df86f6f1d7fefe046bae3b062fe2cb6d, type: 3}
+  - {fileID: 6615582697515641951, guid: ea815d87fe48d584c8ba7851b61bdab7, type: 3}
+  - {fileID: 2777360902986955575, guid: 922d67f1861fde9408aa329076120326, type: 3}
+  - {fileID: 1795669633920630909, guid: cecef751ed118024dba3dec386f49c6e, type: 3}
+  - {fileID: 816191153775275882, guid: c843650a1e6047c4a9f5e96c2128f19b, type: 3}
+  - {fileID: 8672233970563193272, guid: b29c7b8d15c79cb48bdacbc15cdc4168, type: 3}
+  - {fileID: 4788183792810361429, guid: 624987852a73aa14790cf1248fc57bcb, type: 3}
+  - {fileID: 5874604283515160268, guid: 5b4bf4ba6fc40bb4090808bac0566ba5, type: 3}
+  - {fileID: 546931955698597421, guid: a703ffce35d5d0342b0c0114a651e956, type: 3}
+  - {fileID: 2583138248003492100, guid: 29e3856b11f8d2745bd8458ecc1cfaff, type: 3}
+  rareChance: 20
+  legendaryChance: 5
+  mysticChance: 0
 --- !u!1 &5743948064056445751
 GameObject:
   m_ObjectHideFlags: 0

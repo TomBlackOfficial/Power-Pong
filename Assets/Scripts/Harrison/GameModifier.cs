@@ -7,7 +7,7 @@ public class GameModifier : ModifierParent
     public enum PlayerToAffect
     {
         ChoosingPlayer,
-        OposingPlayer,
+        OpposingPlayer,
         BothPlayers
     }
     [Header("Game Stats")]
@@ -27,7 +27,7 @@ public class GameModifier : ModifierParent
         {
             case PlayerToAffect.ChoosingPlayer:
                 break;
-            case PlayerToAffect.OposingPlayer:
+            case PlayerToAffect.OpposingPlayer:
                 break;
             case PlayerToAffect.BothPlayers:
                 break;
