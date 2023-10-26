@@ -46,12 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: 1
   modifierName: Fire Ball
-  description: We going really fast now
+  description: Flaming\nBall.
   icon: {fileID: 0}
   unique: 0
   activateable: 0
   myBall: {fileID: 0}
   ballSpeedAdd: 0
-  ballSpeedMult: 1
+  ballSpeedMult: 1.25
   ballSizeAdjustmentAdd: 0
-  ballSizeAdjustmentMult: 1.1
+  ballSizeAdjustmentMult: 1.25

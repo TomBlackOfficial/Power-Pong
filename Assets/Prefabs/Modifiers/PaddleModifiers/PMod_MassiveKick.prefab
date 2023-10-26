@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: 2
   modifierName: Massive Kick
-  description: Send the ball flying!
+  description: Bouncy\nPaddle.
   icon: {fileID: 0}
   unique: 0
   activateable: 0

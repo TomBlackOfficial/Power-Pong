@@ -15,7 +15,7 @@ public class PlayerModifier : ModifierParent
     public Paddle player;
     public float playerSpeedAdd = 0;
     public float playerSpeedMult = 1;
-    public int playerHeightAdjustmentAdd = 0;
+    public float playerHeightAdjustmentAdd = 0;
     public float playerHeightAdjustmentMult = 1;
     public float playerKnockbackAdd = 0;
     public float playerKnockbackMult = 1;
@@ -39,7 +39,7 @@ public class PlayerModifier : ModifierParent
         {
             float newSpeed = (paddlesToEffect[p].speed + playerSpeedAdd) * playerSpeedMult;
             paddlesToEffect[p].SetSpeed(newSpeed);
-            int newHeight = (int)((float)(paddlesToEffect[p].height + playerHeightAdjustmentAdd) * playerHeightAdjustmentMult);
+            float newHeight = (paddlesToEffect[p].height + playerHeightAdjustmentAdd) * playerHeightAdjustmentMult;
             paddlesToEffect[p].SetPaddleHeight(newHeight);
             float newKnockback = (paddlesToEffect[p].knockback + playerKnockbackAdd) * playerKnockbackMult;
             paddlesToEffect[p].SetKnockBack(newKnockback);

@@ -54,15 +54,12 @@ public class CustomEventSystem : MonoBehaviour
             UpdateVertical();
     }
 
-    private void StartEventSystem()
+    public void StartEventSystem()
     {
-        if (selectedButton == null)
-        {
-            SetSelectedButton(buttons[0]);
+        SetSelectedButton(buttons[0]);
 
-            if (!selectedButton.interactable)
-                MoveNext();
-        }
+        if (!selectedButton.interactable)
+            MoveNext();
 
         started = true;
     }
@@ -135,13 +132,15 @@ public class CustomEventSystem : MonoBehaviour
             MoveBack();
     }
 
-    private void SetSelectedButton(CustomButton newButton)
+    public void SetSelectedButton(CustomButton newButton)
     {
         if (selectedButton != null)
             selectedButton.SetHighlighted(false);
 
         selectedButton = newButton;
-        selectedButton.SetHighlighted(true);
+
+        if (selectedButton != null)
+            selectedButton.SetHighlighted(true);
     }
 
     private void BadInput()

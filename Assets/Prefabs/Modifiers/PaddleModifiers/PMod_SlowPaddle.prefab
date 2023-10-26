@@ -46,13 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: 1
   modifierName: Slow Paddle
-  description: Sabotage your opponent by making their paddle slower
+  description: Slower\nPaddle.
   icon: {fileID: 0}
   unique: 0
   activateable: 0
   playerToAffect: 1
   player: {fileID: 0}
-  playerSpeedAdd: -2
+  playerSpeedAdd: -1
   playerSpeedMult: 1
   playerHeightAdjustmentAdd: 0
   playerHeightAdjustmentMult: 1
+  playerKnockbackAdd: 0
+  playerKnockbackMult: 1

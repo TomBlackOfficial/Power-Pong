@@ -7,7 +7,8 @@ public class Ball : MonoBehaviour
     private GameManager manager;
 
     public float speed { get; private set; }
-    public float size { get; private set; }
+    public float size { get; private set; } = 1;
+
     private Rigidbody2D rb;
     private Vector3 startPosition;
     private Vector2 minMaxSpeed = new Vector2(1, 10);

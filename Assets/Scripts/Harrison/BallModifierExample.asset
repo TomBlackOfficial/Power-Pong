@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bff688e9e05c646ba8e8e3e8cf8573b7, type: 3}
-  m_Name: ClassicMode
+  m_Script: {fileID: 11500000, guid: 082eeeb1173ef944da464ec8784cfef0, type: 3}
+  m_Name: BallModifierExample
   m_EditorClassIdentifier: 
-  gameModeName: Classic
-  scoreToWin: 7
-  startingBallSpeed: 3.5
-  startingPaddleSpeed: 5
+  rarity: 0
+  modifierName: 
+  description: 
+  icon: {fileID: 0}

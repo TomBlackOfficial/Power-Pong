@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RandomModifierSelection : MonoBehaviour
 {
+    public static RandomModifierSelection instance;
+
     [SerializeField] private List<GameObject> masterList = new List<GameObject>();
     [SerializeField] [Range(0, 100)] private float rareChance = 20;
     [SerializeField] [Range(0, 100)] private float legendaryChance = 5;
@@ -18,6 +20,8 @@ public class RandomModifierSelection : MonoBehaviour
     private Modifiers modifierList;
     private void Awake()
     {
+        instance = this;
+
         modifierList.common = new List<GameObject>();
         modifierList.rare = new List<GameObject>();
         modifierList.legendary = new List<GameObject>();
@@ -29,7 +33,6 @@ public class RandomModifierSelection : MonoBehaviour
             {
                 continue;
             }
-            modifierList.common.Add(gameObject);
             switch (MPOut.rarity)
             {
                 case ModifierParent.ModifierRarity.Common:
@@ -56,19 +59,22 @@ public class RandomModifierSelection : MonoBehaviour
             switch (SelectRarity())
             {
                 case ModifierParent.ModifierRarity.Common:
-                    do {
+                    do 
+                    {
                         tempCard = modifierList.common[Random.Range(0, modifierList.common.Count)];
                     } while (cards.Contains(tempCard));
                     cards.Add(tempCard);
                     break;
                 case ModifierParent.ModifierRarity.Rare:
-                    do {
+                    do 
+                    {
                         tempCard = modifierList.rare[Random.Range(0, modifierList.rare.Count)];
                     } while (cards.Contains(tempCard));
                     cards.Add(tempCard);
                     break;
                 case ModifierParent.ModifierRarity.Legendary:
-                    do {
+                    do 
+                    {
                         tempCard = modifierList.legendary[Random.Range(0, modifierList.legendary.Count)];
                     } while (cards.Contains(tempCard));
                     cards.Add(tempCard);

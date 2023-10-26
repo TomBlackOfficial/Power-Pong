@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: 1
   modifierName: Fat Ball
-  description: Its a bit self conscious
+  description: Bigger\nBall.
   icon: {fileID: 0}
   unique: 0
   activateable: 0

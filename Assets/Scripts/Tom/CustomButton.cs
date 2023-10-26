@@ -15,7 +15,7 @@ public class CustomButton : MonoBehaviour
         disabled
     }
 
-    public ButtonStates state;
+    [HideInInspector] public ButtonStates state;
 
     public bool interactable = true;
     public bool affectText = true;
@@ -38,11 +38,13 @@ public class CustomButton : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private TextMesh textMesh;
+    private Animator anim;
 
     private void Awake()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         textMesh = GetComponentInChildren<TextMesh>();
+        TryGetComponent(out anim);
 
         if (!interactable)
             SetState(ButtonStates.disabled);
@@ -74,10 +76,10 @@ public class CustomButton : MonoBehaviour
         {
             SetState(ButtonStates.pressed);
         }
-        else if (selected)
-        {
-            SetState(ButtonStates.selected);
-        }
+        //else if (selected)
+        //{
+        //    SetState(ButtonStates.selected);
+        //}
         else if (highlighted)
         {
             SetState(ButtonStates.highlighted);
@@ -86,6 +88,9 @@ public class CustomButton : MonoBehaviour
         {
             SetState(ButtonStates.normal);
         }
+
+        if (anim != null)
+            UpdateAnimator();
     }
 
     private void SetState(ButtonStates newState)
@@ -113,6 +118,21 @@ public class CustomButton : MonoBehaviour
                 ChangeColor(disabledColor);
                 break;
         }
+    }
+
+    private void UpdateAnimator()
+    {
+        anim.SetBool("Highlighted", IsState(ButtonStates.highlighted));
+        anim.SetBool("Pressed", IsState(ButtonStates.pressed));
+        anim.SetBool("Selected", IsState(ButtonStates.selected));
+    }
+
+    private bool IsState(ButtonStates currentState)
+    {
+        if (currentState == state)
+            return true;
+        else
+            return false;
     }
 
     private void ChangeColor(Color newColor)

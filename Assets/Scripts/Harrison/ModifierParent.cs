@@ -17,7 +17,7 @@ public abstract class ModifierParent : MonoBehaviour
     public ModifierRarity rarity;
     public string modifierName;
     public string description;
-    public Image icon;
+    public Sprite icon;
     public bool unique;
     public bool activateable;
 

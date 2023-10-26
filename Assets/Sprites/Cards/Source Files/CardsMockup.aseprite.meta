@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eaf55b1b71075ca4fa60138b0f5428fc
+guid: 6360ad533c1448d498951353ae9757c0
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638338661342191381
+  platformSettingsDirtyTick: 638338661296500810
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,7 +119,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Card
+  - name: CardsMockup
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -128,9 +128,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 41
-      height: 66
-    spriteID: 14e3121ba4acb66409aaeccda283e3cd
+      width: 192
+      height: 160
+    spriteID: 6ab1a2a518433df479c70e6c0b32a55b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,20 +142,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1920251108
-    name: Card
+    guid: 65110194
+    name: CardsMockup
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Card
+    - name: CardsMockup
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
-        width: 41
-        height: 66
-      spriteId: 14e3121ba4acb66409aaeccda283e3cd
+        width: 192
+        height: 160
+      spriteId: 6ab1a2a518433df479c70e6c0b32a55b
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -194,4 +194,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 41, y: 66}
+  canvasSize: {x: 192, y: 160}

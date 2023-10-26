@@ -46,12 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: 1
   modifierName: Snail Ball
-  description: Cut the ball's speed in half
+  description: Snail\nBall..
   icon: {fileID: 0}
   unique: 0
   activateable: 0
   myBall: {fileID: 0}
   ballSpeedAdd: 0
-  ballSpeedMult: 0.5
+  ballSpeedMult: 0.65
   ballSizeAdjustmentAdd: 1
   ballSizeAdjustmentMult: 1

@@ -46,12 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: 0
   modifierName: Slower Ball
-  description: Lets calm down a bit
+  description: Slower\nBall.
   icon: {fileID: 0}
   unique: 0
   activateable: 0
   myBall: {fileID: 0}
-  ballSpeedAdd: -2
+  ballSpeedAdd: -1
   ballSpeedMult: 1
   ballSizeAdjustmentAdd: 0
   ballSizeAdjustmentMult: 1

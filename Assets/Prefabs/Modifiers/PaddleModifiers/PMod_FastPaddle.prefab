@@ -46,13 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: 1
   modifierName: Fast Paddle
-  description: Gain some speed
+  description: Faster\nPaddle.
   icon: {fileID: 0}
   unique: 0
   activateable: 0
   playerToAffect: 0
   player: {fileID: 0}
-  playerSpeedAdd: 2
+  playerSpeedAdd: 1.5
   playerSpeedMult: 1
   playerHeightAdjustmentAdd: 0
   playerHeightAdjustmentMult: 1
+  playerKnockbackAdd: 0
+  playerKnockbackMult: 1

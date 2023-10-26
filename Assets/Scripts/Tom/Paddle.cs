@@ -11,10 +11,10 @@ public class Paddle : MonoBehaviour
     [SerializeField] private GameObject sprite;
 
     public float speed { get; private set; } = 5;
-    public int height { get; private set; } = 20;
+    public float height { get; private set; } = 1;
     public float knockback { get; private set; } = 0.5f;
     private Vector2 minMaxSpeed = new Vector2(1, 20);
-    private Vector2 minMaxHeight = new Vector2(2, 40);
+    private Vector2 minMaxHeight = new Vector2(0.25f, 2.5f);
     private Vector2 minMaxKnockback = new Vector2(0.25f, 5f);
 
     private Vector3 startPosition;
@@ -88,10 +88,10 @@ public class Paddle : MonoBehaviour
         speed = Mathf.Clamp(newSpeed, minMaxSpeed.x, minMaxSpeed.y);
     }
 
-    public void SetPaddleHeight(int newHeight)
+    public void SetPaddleHeight(float newHeight)
     {
-        height = (int)Mathf.Clamp(newHeight, minMaxHeight.x, minMaxHeight.y);
-        sprite.transform.localScale = new Vector3(1, height, 1);
+        height = Mathf.Clamp(newHeight, minMaxHeight.x, minMaxHeight.y);
+        transform.localScale = new Vector3(1, height, 1);
     }
 
     public void SetKnockBack(float newKnockback)
