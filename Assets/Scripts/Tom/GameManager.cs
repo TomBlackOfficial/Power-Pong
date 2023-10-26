@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,9 +38,13 @@ public class GameManager : MonoBehaviour
     public TextMesh player1Text;
     public TextMesh player2Text;
     public Animator cooldownAnim;
+    public GameObject cardSelectionScreen;
 
     private int player1Score;
     private int player2Score;
+
+    private Paddle loser;
+    private Paddle winner;
 
     private void Awake()
     {
@@ -67,11 +72,17 @@ public class GameManager : MonoBehaviour
         // Checking which player won the round
         if (playerID == 1)
         {
+            winner = player1Paddle;
+            loser = player2Paddle;
+
             player1Score++;
             player1Text.text = player1Score.ToString();
         }
         else if (playerID == 2)
         {
+            winner = player2Paddle;
+            loser = player1Paddle;
+
             player2Score++;
             player2Text.text = player2Score.ToString();
         }
@@ -97,7 +108,45 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // If no one won the game then continue
+        SelectModifiers();
+    }
+
+    public void SelectModifiers()
+    {
+        cardSelectionScreen.SetActive(true);
+        CardSelection.instance.GetModifiers();
+    }
+
+    public void ModifiersSelected()
+    {
+        StartCountdown();
+    }
+
+    public void ApplyModifier(GameObject modifier)
+    {
+        if (modifier.TryGetComponent(out BallModifier ballModifierScript))
+        {
+            ballModifiers.Add(modifier);
+        }
+        else if (modifier.TryGetComponent(out PlayerModifier playerModifierScript))
+        {
+            switch (playerModifierScript.playerToAffect)
+            {
+                case PlayerModifier.PlayerToAffect.ChoosingPlayer:
+                    loser.AddModifier(modifier);
+                    break;
+                case PlayerModifier.PlayerToAffect.OposingPlayer:
+                    winner.AddModifier(modifier);
+                    break;
+                case PlayerModifier.PlayerToAffect.BothPlayers:
+                    loser.AddModifier(modifier);
+                    winner.AddModifier(modifier);
+                    break;
+            }
+        }
+
+        cardSelectionScreen.SetActive(false);
+        CardSelection.instance.gameObject.GetComponent<CustomEventSystem>().StartEventSystem();
         StartCountdown();
     }
 
@@ -108,6 +157,7 @@ public class GameManager : MonoBehaviour
 
         currentGameState = GameStates.GameOver;
         Debug.Log("Player " + winnerID + " is the winner!");
+        SceneManager.LoadScene(0);
     }
 
     private void ResetPosition()
