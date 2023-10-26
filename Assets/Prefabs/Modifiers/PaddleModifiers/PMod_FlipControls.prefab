@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2583138248003492100
+--- !u!1 &8892194649281229128
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3036048655569572296}
-  - component: {fileID: 5656924115531300719}
+  - component: {fileID: 4942215753482242533}
+  - component: {fileID: -4233167929219514494}
   m_Layer: 0
-  m_Name: PMod_TallerPaddle
+  m_Name: PMod_FlipControls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3036048655569572296
+--- !u!4 &4942215753482242533
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2583138248003492100}
+  m_GameObject: {fileID: 8892194649281229128}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.26297593, y: -0.3174555, z: -0.009854063}
@@ -32,28 +32,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5656924115531300719
+--- !u!114 &-4233167929219514494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2583138248003492100}
+  m_GameObject: {fileID: 8892194649281229128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b19fcf17de6f9b408c5efc87b097420, type: 3}
+  m_Script: {fileID: 11500000, guid: d8614e8d29d639945927eb522a52922b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
-  modifierName: Taller Paddle
-  description: Longer\nPaddle.
+  rarity: 3
+  modifierName: Flip Controls
+  description: Flip\nControls
   icon: {fileID: 0}
   unique: 0
   activateable: 0
-  playerToAffect: 0
+  playerToAffect: 1
   playerSpeedAdd: 0
   playerSpeedMult: 1
-  playerHeightAdjustmentAdd: 5
+  playerHeightAdjustmentAdd: 0
   playerHeightAdjustmentMult: 1
   playerKnockbackAdd: 0
   playerKnockbackMult: 1

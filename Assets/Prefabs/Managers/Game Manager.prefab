@@ -209,6 +209,7 @@ MonoBehaviour:
   player1Text: {fileID: 0}
   player2Text: {fileID: 0}
   cooldownAnim: {fileID: 5875450827092675899}
+  cardSelectionScreen: {fileID: 0}
 --- !u!114 &5319193525307417449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,9 +235,13 @@ MonoBehaviour:
   - {fileID: 5874604283515160268, guid: 5b4bf4ba6fc40bb4090808bac0566ba5, type: 3}
   - {fileID: 546931955698597421, guid: a703ffce35d5d0342b0c0114a651e956, type: 3}
   - {fileID: 2583138248003492100, guid: 29e3856b11f8d2745bd8458ecc1cfaff, type: 3}
-  rareChance: 20
+  - {fileID: 6578799704046260757, guid: bee5d512bb1cebf42895f8f45a30166f, type: 3}
+  - {fileID: 4083980078138144000, guid: 6bff47bdf15b3a8428f73144ec917578, type: 3}
+  - {fileID: 5696541421057873653, guid: c10476433649ba6458bdb8e608454209, type: 3}
+  - {fileID: 8892194649281229128, guid: c4e41ec45c052e84c8eff53357aab011, type: 3}
+  rareChance: 15
   legendaryChance: 5
-  mysticChance: 0
+  mysticChance: 0.25
 --- !u!1 &5743948064056445751
 GameObject:
   m_ObjectHideFlags: 0

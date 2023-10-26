@@ -13,22 +13,36 @@ public abstract class ModifierParent : MonoBehaviour
         Legendary,
         Mystic
     }
+    public enum Unique
+    {
+        NotUnique,
+        ChoosingPlayer,
+        ForWholeGame
+    }
     [Header("Base Variable")]
     public ModifierRarity rarity;
     public string modifierName;
     public string description;
     public Sprite icon;
-    public bool unique;
+    public Unique unique;
     public bool activateable;
 
     public virtual void ActivateAbility()
     {
 
     }
+    public virtual void DeactivateAbility()
+    {
 
+    }
     public virtual void StartModifierEffect()
     {
         //paddleList.Add(this);
+    }
+
+    public virtual void InitializeValues()
+    {
+
     }
     /*
     GameObject GO = Instantiate(Prefab, parent.tranform);

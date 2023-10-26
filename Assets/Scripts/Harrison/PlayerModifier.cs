@@ -11,19 +11,26 @@ public class PlayerModifier : ModifierParent
         BothPlayers
     }
     [Header("Player Stats")]
-    public PlayerToAffect playerToAffect;
-    public Paddle player;
-    public float playerSpeedAdd = 0;
-    public float playerSpeedMult = 1;
-    public float playerHeightAdjustmentAdd = 0;
-    public float playerHeightAdjustmentMult = 1;
-    public float playerKnockbackAdd = 0;
-    public float playerKnockbackMult = 1;
-
+    [SerializeField] protected PlayerToAffect playerToAffect;
+    protected Paddle myPlayer;
+    [SerializeField] protected float playerSpeedAdd = 0;
+    [SerializeField] protected float playerSpeedMult = 1;
+    [SerializeField] protected float playerHeightAdjustmentAdd = 0;
+    [SerializeField] protected float playerHeightAdjustmentMult = 1;
+    [SerializeField] protected float playerKnockbackAdd = 0;
+    [SerializeField] protected float playerKnockbackMult = 1;
+    public PlayerToAffect GetPlayerToAffect()
+    {
+        return playerToAffect;
+    }
+    public override void InitializeValues()
+    {
+        base.InitializeValues();
+        myPlayer = GetComponentInParent<Paddle>();
+    }
     public override void StartModifierEffect()
     {
         base.StartModifierEffect();
-        player = GetComponentInParent<Paddle>();
         List<Paddle> paddlesToEffect = new List<Paddle>();
         switch (playerToAffect)
         {
@@ -32,7 +39,7 @@ public class PlayerModifier : ModifierParent
                 paddlesToEffect.Add(GameManager.instance.player2Paddle);
                 break;
             default:
-                paddlesToEffect.Add(player);
+                paddlesToEffect.Add(myPlayer);
                 break;
         }
         for (int p = 0; p < paddlesToEffect.Count; p++)

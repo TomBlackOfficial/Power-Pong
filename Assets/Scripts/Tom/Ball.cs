@@ -11,8 +11,9 @@ public class Ball : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector3 startPosition;
-    private Vector2 minMaxSpeed = new Vector2(1, 10);
-    private Vector2 minMaxSize = new Vector2(0.5f, 5);
+    [SerializeField] private Vector2 minMaxSpeed = new Vector2(1, 10);
+    [SerializeField] private Vector2 minMaxSize = new Vector2(0.5f, 5);
+    private List<BallModifier> allModifiers = new List<BallModifier>();
     private List<BallModifier> normalModifiers = new List<BallModifier>();
     private Dictionary<BallModifier, bool> activateModifiers = new Dictionary<BallModifier, bool>();
 
@@ -39,6 +40,11 @@ public class Ball : MonoBehaviour
         size = Mathf.Clamp(newSize, minMaxSize.x, minMaxSize.y);
     }
 
+    public Vector2 GetBallMinMixSpeed()
+    {
+        return minMaxSpeed;
+    }
+
     public void Launch()
     {
         float x = Random.Range(0, 2) == 0 ? -1 : 1;
@@ -61,6 +67,10 @@ public class Ball : MonoBehaviour
         {
             SetBallSpeed(speed + collision.gameObject.GetComponent<Paddle>().knockback);
             AudioManager.instance.PlayHitPaddleSound();
+            for (int m = 0; m < allModifiers.Count; m++)
+            {
+                allModifiers[m].BallHitPlayer(collision.gameObject.GetComponent<Paddle>());
+            }
         }
         else
         {
@@ -75,7 +85,7 @@ public class Ball : MonoBehaviour
         BallModifier mod;
         if (thisObject.TryGetComponent<BallModifier>(out mod))
         {
-            if (mod.activateable)
+            if (mod.needsPlayerAssignment)
             {
                 if (paddle == null)
                 {
@@ -83,12 +93,22 @@ public class Ball : MonoBehaviour
                     Destroy(thisObject);
                     return;
                 }
-                activateModifiers.Add(mod, paddle.isPlayer1);
+                mod.AssignPlayer(paddle);
+                if (mod.activateable)
+                {
+                    activateModifiers.Add(mod, paddle.isPlayer1);
+                }
+                else
+                {
+                    normalModifiers.Add(mod);
+                }
             }
             else
             {
                 normalModifiers.Add(mod);
             }
+            allModifiers.Add(mod);
+            mod.InitializeValues();
             mod.StartModifierEffect();
         }
         else

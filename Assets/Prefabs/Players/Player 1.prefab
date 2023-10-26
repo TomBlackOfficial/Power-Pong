@@ -133,6 +133,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer1: 1
   sprite: {fileID: 8273398725242484978}
+  minMaxSpeed: {x: 1, y: 25}
+  minMaxHeight: {x: 1, y: 3}
+  minMaxKnockback: {x: 0.25, y: 10}
 --- !u!50 &8248666809059480926
 Rigidbody2D:
   serializedVersion: 4

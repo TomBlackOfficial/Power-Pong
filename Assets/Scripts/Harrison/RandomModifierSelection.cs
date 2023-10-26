@@ -20,6 +20,10 @@ public class RandomModifierSelection : MonoBehaviour
     private Modifiers modifierList;
     private void Awake()
     {
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+        }
         instance = this;
 
         modifierList.common = new List<GameObject>();

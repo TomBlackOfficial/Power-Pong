@@ -48,10 +48,9 @@ MonoBehaviour:
   modifierName: Massive Kick
   description: Bouncy\nPaddle.
   icon: {fileID: 0}
-  unique: 0
+  unique: 1
   activateable: 0
   playerToAffect: 0
-  player: {fileID: 0}
   playerSpeedAdd: 0
   playerSpeedMult: 1
   playerHeightAdjustmentAdd: 0

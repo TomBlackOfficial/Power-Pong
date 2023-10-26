@@ -51,10 +51,9 @@ MonoBehaviour:
   unique: 0
   activateable: 0
   playerToAffect: 1
-  player: {fileID: 0}
   playerSpeedAdd: 0
   playerSpeedMult: 1
-  playerHeightAdjustmentAdd: -0.2
+  playerHeightAdjustmentAdd: -5
   playerHeightAdjustmentMult: 1
   playerKnockbackAdd: 0
   playerKnockbackMult: 1

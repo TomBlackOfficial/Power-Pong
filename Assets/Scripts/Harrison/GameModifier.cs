@@ -11,12 +11,12 @@ public class GameModifier : ModifierParent
         BothPlayers
     }
     [Header("Game Stats")]
-    public GameManager manager;
-    public PlayerToAffect playerToAffect;
+    [SerializeField] private GameManager manager;
+    [SerializeField] private PlayerToAffect playerToAffect;
     [Header("Player Stats")]
-    public GameObject playerModifier;
+    [SerializeField] private GameObject playerModifier;
     [Header("Ball Stats")]
-    public GameObject ballModifier;
+    [SerializeField] private GameObject ballModifier;
 
     public override void StartModifierEffect()
     {

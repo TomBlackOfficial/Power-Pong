@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
         }
         else if (modifier.TryGetComponent(out PlayerModifier playerModifierScript))
         {
-            switch (playerModifierScript.playerToAffect)
+            switch (playerModifierScript.GetPlayerToAffect())
             {
                 case PlayerModifier.PlayerToAffect.ChoosingPlayer:
                     loser.AddModifier(modifier);

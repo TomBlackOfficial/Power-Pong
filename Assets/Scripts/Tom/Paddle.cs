@@ -13,9 +13,11 @@ public class Paddle : MonoBehaviour
     public float speed { get; private set; } = 5;
     public float height { get; private set; } = 1;
     public float knockback { get; private set; } = 0.5f;
-    private Vector2 minMaxSpeed = new Vector2(1, 20);
-    private Vector2 minMaxHeight = new Vector2(0.25f, 2.5f);
-    private Vector2 minMaxKnockback = new Vector2(0.25f, 5f);
+    [SerializeField] private Vector2 minMaxSpeed = new Vector2(1, 20);
+    [SerializeField] private Vector2 minMaxHeight = new Vector2(0.25f, 2.5f);
+    [SerializeField] private Vector2 minMaxKnockback = new Vector2(0.25f, 5f);
+    private bool flipControls = false;
+    private bool lastActivate = false;
 
     private Vector3 startPosition;
     private Rigidbody2D rb;
@@ -24,7 +26,7 @@ public class Paddle : MonoBehaviour
     private bool paralized = true;
 
     private List<PlayerModifier> normalModifiers = new List<PlayerModifier>();
-    private List<PlayerModifier> activateModifiers = new List<PlayerModifier>();
+    private List<ModifierParent> activateModifiers = new List<ModifierParent>();
 
     private void Awake()
     {
@@ -57,6 +59,10 @@ public class Paddle : MonoBehaviour
                 activate = true;
             }
         }
+        if (flipControls)
+        {
+            movement = -movement;
+        }
         rb.velocity = new Vector2(0, movement * speed);
 
         if (activate)
@@ -69,6 +75,14 @@ public class Paddle : MonoBehaviour
                 }
             }
         }
+        else if (activate != lastActivate)
+        {
+            for (int a = 0; a < activateModifiers.Count; a++)
+            {
+                activateModifiers[a].DeactivateAbility();
+            }
+        }
+        lastActivate = activate;
     }
 
     public void Reset()
@@ -86,6 +100,10 @@ public class Paddle : MonoBehaviour
     public void SetSpeed(float newSpeed)
     {
         speed = Mathf.Clamp(newSpeed, minMaxSpeed.x, minMaxSpeed.y);
+    }
+    public void FlipControls()
+    {
+        flipControls = !flipControls;
     }
 
     public void SetPaddleHeight(float newHeight)
@@ -113,6 +131,7 @@ public class Paddle : MonoBehaviour
             {
                 normalModifiers.Add(mod);
             }
+            mod.InitializeValues();
             mod.StartModifierEffect();
         }
         else
@@ -120,5 +139,10 @@ public class Paddle : MonoBehaviour
             Destroy(thisObject);
             Debug.LogError("Non player modifier was trying to be added as a modifier.");
         }
+    }
+
+    public void AddBallActive(BallModifier mod)
+    {
+        activateModifiers.Add(mod);
     }
 }

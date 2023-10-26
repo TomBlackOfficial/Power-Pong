@@ -5,18 +5,45 @@ using UnityEngine;
 public class BallModifier : ModifierParent
 {
     [Header("Ball Stats")]
-    public Ball myBall;
-    public float ballSpeedAdd = 0;
-    public float ballSpeedMult = 1;
-    public float ballSizeAdjustmentAdd = 0;
-    public float ballSizeAdjustmentMult = 1;
+    protected Ball myBall;
+    [SerializeField] protected float ballSpeedAdd = 0;
+    [SerializeField] protected float ballSpeedMult = 1;
+    [SerializeField] protected float ballSizeAdjustmentAdd = 0;
+    [SerializeField] protected float ballSizeAdjustmentMult = 1;
+    [SerializeField] public bool needsPlayerAssignment = false;
+    protected Paddle myPlayer;
+    private void Awake()
+    {
+        if (activateable)
+        {
+            needsPlayerAssignment = true;
+        }
+    }
+    public virtual void AssignPlayer(Paddle player)
+    {
+        if (myPlayer == null && player != null)
+        {
+            myPlayer = player;
+        }
+    }
+
+    public override void InitializeValues()
+    {
+        base.InitializeValues();
+        myBall = GetComponentInParent<Ball>();
+    }
+
     public override void StartModifierEffect()
     {
         base.StartModifierEffect();
-        myBall = GetComponentInParent<Ball>();
         float newSpeed = (myBall.speed + ballSpeedAdd) * ballSpeedMult;
         myBall.SetBallSpeed(newSpeed);
         float newSize = (myBall.size + ballSizeAdjustmentAdd) * ballSizeAdjustmentMult;
         myBall.SetBallSize(newSize);
+    }
+
+    public virtual void BallHitPlayer(Paddle player)
+    {
+        
     }
 }
