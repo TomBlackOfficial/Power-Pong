@@ -147,6 +147,124 @@ TextMesh:
   m_CorrespondingSourceObject: {fileID: 8883699925928021336, guid: 9916d11c13ff24bc7927c134a4fe13a6, type: 3}
   m_PrefabInstance: {fileID: 7699961977069025942}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1555591164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5122752482957328812, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+  m_PrefabInstance: {fileID: 1380349245418050087}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1555591165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555591164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8af3327c2916b64ca1399a28da11eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1555591166}
+  hit1: {fileID: 8300000, guid: fb6baa16954a1b54795b89770513026f, type: 3}
+  hit2: {fileID: 8300000, guid: 275938c26fb89f24fa483642ca4d9486, type: 3}
+  hit3: {fileID: 8300000, guid: b2c6a801e4fc0e64080d6e4ad5a392d5, type: 3}
+  score: {fileID: 8300000, guid: ded31dc4c1d638a41990a40299981174, type: 3}
+--- !u!82 &1555591166
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555591164}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1665305782 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4884757766326582452, guid: 1932f9b5fad214309a76edfca5d92682, type: 3}
@@ -242,7 +360,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5122752482957328812, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1555591166}
+    - targetCorrespondingSourceObject: {fileID: 5122752482957328812, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1555591165}
   m_SourcePrefab: {fileID: 100100000, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
 --- !u!1001 &2342582116504993535
 PrefabInstance:

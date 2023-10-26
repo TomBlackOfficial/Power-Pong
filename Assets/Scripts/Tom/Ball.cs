@@ -44,6 +44,7 @@ public class Ball : MonoBehaviour
         float y = Random.Range(0, 2) == 0 ? -1 : 1;
         rb.velocity = new Vector2(speed * x, speed * y);
         gameObject.transform.localScale = new Vector3(size, size, 1);
+        //AudioManager.instance.PlayLaunchSound();
     }
 
     IEnumerator LaunchDelay()
@@ -58,6 +59,11 @@ public class Ball : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             SetBallSpeed(speed + collision.gameObject.GetComponent<Paddle>().knockback);
+            AudioManager.instance.PlayHitPaddleSound();
+        }
+        else
+        {
+            AudioManager.instance.PlayHitSidesSound();
         }
     }
 
