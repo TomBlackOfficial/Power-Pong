@@ -30,6 +30,7 @@ public class Ball : MonoBehaviour
     public void SetBallSpeed(float newSpeed)
     {
         speed = Mathf.Clamp(newSpeed, minMaxSpeed.x, minMaxSpeed.y);
+        rb.velocity = rb.velocity.normalized * speed;
     }
 
     public void SetBallSize(float newSize)
@@ -56,7 +57,7 @@ public class Ball : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            SetBallSpeed(speed + 0.5f);
+            SetBallSpeed(speed + collision.gameObject.GetComponent<Paddle>().knockback);
         }
     }
 

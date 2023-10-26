@@ -12,9 +12,10 @@ public class Paddle : MonoBehaviour
 
     public float speed { get; private set; } = 5;
     public int height { get; private set; } = 20;
-
+    public float knockback { get; private set; } = 0.5f;
     private Vector2 minMaxSpeed = new Vector2(1, 20);
     private Vector2 minMaxHeight = new Vector2(2, 40);
+    private Vector2 minMaxKnockback = new Vector2(0.25f, 5f);
 
     private Vector3 startPosition;
     private Rigidbody2D rb;
@@ -93,6 +94,10 @@ public class Paddle : MonoBehaviour
         sprite.transform.localScale = new Vector3(1, height, 1);
     }
 
+    public void SetKnockBack(float newKnockback)
+    {
+        knockback = Mathf.Clamp(newKnockback, minMaxKnockback.x, minMaxKnockback.y);
+    }
     public void AddModifier(GameObject modifier)
     {
         GameObject thisObject = Instantiate(modifier, this.transform);
