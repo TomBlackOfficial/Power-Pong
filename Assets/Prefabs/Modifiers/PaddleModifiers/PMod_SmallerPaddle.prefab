@@ -53,7 +53,7 @@ MonoBehaviour:
   playerToAffect: 1
   playerSpeedAdd: 0
   playerSpeedMult: 1
-  playerHeightAdjustmentAdd: -5
+  playerHeightAdjustmentAdd: -0.15
   playerHeightAdjustmentMult: 1
   playerKnockbackAdd: 0
   playerKnockbackMult: 1
