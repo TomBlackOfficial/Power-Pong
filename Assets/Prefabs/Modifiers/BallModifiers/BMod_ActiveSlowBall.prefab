@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: 2
   modifierName: Active Slow Ball
-  description: Active Slow Ball
+  description: Active\nSlow Ball
   icon: {fileID: 0}
   unique: 1
   activateable: 1
@@ -55,4 +55,4 @@ MonoBehaviour:
   ballSizeAdjustmentAdd: 0
   ballSizeAdjustmentMult: 1
   needsPlayerAssignment: 0
-  speedMultiplier: 0.75
+  speedMultiplier: 0.5

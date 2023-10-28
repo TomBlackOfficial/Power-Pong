@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: 3
   modifierName: Harness Time
-  description: Harness Time
+  description: Harness\nTime
   icon: {fileID: 0}
   unique: 2
   activateable: 0

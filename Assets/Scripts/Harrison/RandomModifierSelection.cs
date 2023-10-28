@@ -96,15 +96,15 @@ public class RandomModifierSelection : MonoBehaviour
     }
     private ModifierParent.ModifierRarity SelectRarity()
     {
-        if (Random.Range(0, 100) < mysticChance)
+        if (Random.Range(0f, 100f) < mysticChance)
         {
             return ModifierParent.ModifierRarity.Mystic;
         }
-        if (Random.Range(0, 100) < legendaryChance)
+        if (Random.Range(0f, 100f) < legendaryChance)
         {
             return ModifierParent.ModifierRarity.Legendary;
         }
-        if (Random.Range(0, 100) < rareChance)
+        if (Random.Range(0f, 100f) < rareChance)
         {
             return ModifierParent.ModifierRarity.Rare;
         }

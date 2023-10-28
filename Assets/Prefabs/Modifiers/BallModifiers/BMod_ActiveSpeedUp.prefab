@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: 2
   modifierName: Active Speed Up
-  description: Active Speed Up
+  description: Active/nSpeed Up
   icon: {fileID: 0}
   unique: 1
   activateable: 1
@@ -55,4 +55,4 @@ MonoBehaviour:
   ballSizeAdjustmentAdd: 0
   ballSizeAdjustmentMult: 1
   needsPlayerAssignment: 0
-  speedMultiplier: 1.25
+  speedMultiplier: 1.5

@@ -44,14 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b19fcf17de6f9b408c5efc87b097420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
+  rarity: 0
   modifierName: Fast Paddle
   description: Faster\nPaddle.
   icon: {fileID: 0}
   unique: 0
   activateable: 0
   playerToAffect: 0
-  player: {fileID: 0}
   playerSpeedAdd: 1.5
   playerSpeedMult: 1
   playerHeightAdjustmentAdd: 0

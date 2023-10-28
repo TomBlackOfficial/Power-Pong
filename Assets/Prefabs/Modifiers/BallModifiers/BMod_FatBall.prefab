@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082eeeb1173ef944da464ec8784cfef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
+  rarity: 0
   modifierName: Fat Ball
   description: Bigger\nBall.
   icon: {fileID: 0}
