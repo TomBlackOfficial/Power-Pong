@@ -18,6 +18,8 @@ public class Paddle : MonoBehaviour
     [SerializeField] private Vector2 minMaxKnockback = new Vector2(0.25f, 5f);
     private bool flipControls = false;
     private bool lastActivate = false;
+    private bool slidingControls = false;
+    private float slideAmount = 0.1f;
 
     private Vector3 startPosition;
     private Rigidbody2D rb;
@@ -63,7 +65,21 @@ public class Paddle : MonoBehaviour
         {
             movement = -movement;
         }
-        rb.velocity = new Vector2(0, movement * speed);
+        if (slidingControls)
+        {
+            if (movement != 0)
+            {
+                rb.velocity = new Vector2(0, movement * speed);
+            }
+            else
+            {
+                rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(0, 0), slideAmount);
+            }
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, movement * speed);
+        }
 
         if (activate)
         {
@@ -106,6 +122,11 @@ public class Paddle : MonoBehaviour
         flipControls = !flipControls;
     }
 
+    public void SlidingControls(float slipAmount)
+    {
+        slideAmount = slipAmount;
+        slidingControls = true;
+    }
     public void SetPaddleHeight(float newHeight)
     {
         height = Mathf.Clamp(newHeight, minMaxHeight.x, minMaxHeight.y);

@@ -390,6 +390,14 @@ PrefabInstance:
       propertyPath: cardSelectionScreen
       value: 
       objectReference: {fileID: 195919329}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: p1Modifier.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: 'p1Modifier.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7642035811385154428, guid: 92ad0f949288dc04282e8ede4c15c2da, type: 3}
     - target: {fileID: 5122752482957328812, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -583,6 +591,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa766089cfa73d4aa567d47a6b9df2f, type: 3}
+--- !u!4 &3425951937191266315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3607748757751778579}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.26297593, y: -0.3174555, z: -0.009854063}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3607748757751778579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3425951937191266315}
+  m_Layer: 0
+  m_Name: PMod_SlippyControls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1001 &4865654965214993655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -649,19 +688,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.23337837
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.08338762
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.53343624
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.8338762
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -936,3 +975,4 @@ SceneRoots:
   - {fileID: 6148072611046805172}
   - {fileID: 2442089684811277353}
   - {fileID: 944525345}
+  - {fileID: 3425951937191266315}
