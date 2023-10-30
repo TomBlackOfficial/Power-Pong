@@ -10,11 +10,18 @@ public class GameModifier : ModifierParent
         OpposingPlayer,
         BothPlayers
     }
+    [System.Serializable]
+    public struct PlayerEffect
+    {
+        public PlayerToAffect playerToAffect;
+        public int livesToGain;
+        public int livesToSet;
+    }
     [Header("Game Stats")]
     [SerializeField] private GameManager manager;
     [SerializeField] private PlayerToAffect playerToAffect;
     [Header("Player Stats")]
-    [SerializeField] private GameObject playerModifier;
+    [SerializeField] private List<PlayerEffect> player = new List<PlayerEffect>();
     [Header("Ball Stats")]
     [SerializeField] private GameObject ballModifier;
 
@@ -22,15 +29,21 @@ public class GameModifier : ModifierParent
     {
         base.StartModifierEffect();
         manager = GetComponentInParent<GameManager>();
-        List<Paddle> paddlesToEffect = new List<Paddle>();
-        switch (playerToAffect)
+        List<PlayerToAffect> tempList = new List<PlayerToAffect>();
+        for (int p = 0; p < player.Count; p++)
         {
-            case PlayerToAffect.ChoosingPlayer:
-                break;
-            case PlayerToAffect.OpposingPlayer:
-                break;
-            case PlayerToAffect.BothPlayers:
-                break;
+            if (!tempList.Contains(player[p].playerToAffect))
+            {
+                tempList.Add(player[p].playerToAffect);
+                if (player[p].livesToGain != null && player[p].livesToGain != 0)
+                {
+                    //manager.AddLives(player[p].playerToAffect, player[p].livesToGain);
+                }
+                if (player[p].livesToSet != null && player[p].livesToSet > 0)
+                {
+                    //manager.SetLives(player[p].playerToAffect, player[p].livesToSet);
+                }
+            }
         }
     }
 }

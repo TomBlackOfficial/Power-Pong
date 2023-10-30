@@ -591,37 +591,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa766089cfa73d4aa567d47a6b9df2f, type: 3}
---- !u!4 &3425951937191266315
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3607748757751778579}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26297593, y: -0.3174555, z: -0.009854063}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3607748757751778579
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3425951937191266315}
-  m_Layer: 0
-  m_Name: PMod_SlippyControls
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1001 &4865654965214993655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -779,6 +748,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f161574b9716e4208a7064a0291ea966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &6694831373638344545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990833843548825267}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.26297593, y: -0.3174555, z: -0.009854063}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6714884033798997586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -844,6 +828,31 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1932f9b5fad214309a76edfca5d92682, type: 3}
+--- !u!114 &7232015648762491065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990833843548825267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8d9a188da17a0448d94db1bd8a61e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rarity: 3
+  modifierName: Sudden Death
+  description: Sudden\nDeath
+  icon: {fileID: 0}
+  unique: 2
+  activateable: 0
+  manager: {fileID: 0}
+  playerToAffect: 2
+  player:
+  - playerToAffect: 2
+    livesToGain: 0
+    livesToSet: 1
+  ballModifier: {fileID: 0}
 --- !u!1001 &7699961977069025942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -905,6 +914,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9916d11c13ff24bc7927c134a4fe13a6, type: 3}
+--- !u!1 &7990833843548825267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6694831373638344545}
+  - component: {fileID: 7232015648762491065}
+  m_Layer: 0
+  m_Name: GMod_SuddenDeath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1001 &8479422350867615000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -975,4 +1001,4 @@ SceneRoots:
   - {fileID: 6148072611046805172}
   - {fileID: 2442089684811277353}
   - {fileID: 944525345}
-  - {fileID: 3425951937191266315}
+  - {fileID: 6694831373638344545}
