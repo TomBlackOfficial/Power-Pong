@@ -17,9 +17,12 @@ public class Ball : MonoBehaviour
     private List<BallModifier> normalModifiers = new List<BallModifier>();
     private Dictionary<BallModifier, bool> activateModifiers = new Dictionary<BallModifier, bool>();
 
+    private ParticleSystem myPS;
+    [SerializeField] private Vector2Int particlesToEmitOnBurst = new Vector2Int(50, 75);
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        myPS = GetComponentInChildren<ParticleSystem>();
         startPosition = transform.position;
     }
 
@@ -27,6 +30,8 @@ public class Ball : MonoBehaviour
     {
         manager = GameManager.instance;
         StartCoroutine(LaunchDelay());
+        myPS.Pause();
+        myPS.Clear();
     }
 
     public void SetBallSpeed(float newSpeed)
@@ -71,11 +76,13 @@ public class Ball : MonoBehaviour
             {
                 allModifiers[m].BallHitPlayer(collision.gameObject.GetComponent<Paddle>());
             }
+            collision.gameObject.GetComponent<Paddle>().TriggerParticleEffect(gameObject.transform.position);
         }
         else
         {
             AudioManager.instance.PlayHitSidesSound();
         }
+        TriggerParticleEffect();
     }
 
     public void AddModifier(GameObject modifier, Paddle paddle = null)
@@ -116,5 +123,11 @@ public class Ball : MonoBehaviour
             Destroy(thisObject);
             Debug.LogError("Non Ball modifier was trying to be added as a modifier.");
         }
+    }
+
+    public void TriggerParticleEffect()
+    {
+        myPS.Emit(Random.Range(particlesToEmitOnBurst.x, particlesToEmitOnBurst.y + 1));
+        myPS.Play();
     }
 }

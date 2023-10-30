@@ -30,9 +30,13 @@ public class Paddle : MonoBehaviour
     private List<PlayerModifier> normalModifiers = new List<PlayerModifier>();
     private List<ModifierParent> activateModifiers = new List<ModifierParent>();
 
+    private ParticleSystem myPS;
+    [SerializeField] private Vector2Int particlesToEmitOnBurst = new Vector2Int(50, 75);
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        myPS = GetComponentInChildren<ParticleSystem>();
         startPosition = transform.position;
     }
 
@@ -40,6 +44,8 @@ public class Paddle : MonoBehaviour
     {
         manager = GameManager.instance;
         SetSpeed(manager.gamemode.startingPaddleSpeed);
+        myPS.Pause();
+        myPS.Clear();
     }
 
     private void Update()
@@ -165,5 +171,12 @@ public class Paddle : MonoBehaviour
     public void AddBallActive(BallModifier mod)
     {
         activateModifiers.Add(mod);
+    }
+
+    public void TriggerParticleEffect(Vector3 position)
+    {
+        myPS.transform.position = new Vector3(gameObject.transform.position.x, position.y, gameObject.transform.position.z);
+        myPS.Emit(Random.Range(particlesToEmitOnBurst.x, particlesToEmitOnBurst.y + 1));
+        myPS.Play();
     }
 }
