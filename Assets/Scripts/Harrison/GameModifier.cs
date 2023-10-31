@@ -22,8 +22,6 @@ public class GameModifier : ModifierParent
     [SerializeField] private PlayerToAffect playerToAffect;
     [Header("Player Stats")]
     [SerializeField] private List<PlayerEffect> player = new List<PlayerEffect>();
-    [Header("Ball Stats")]
-    [SerializeField] private GameObject ballModifier;
 
     public override void StartModifierEffect()
     {

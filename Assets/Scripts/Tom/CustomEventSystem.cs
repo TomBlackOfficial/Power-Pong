@@ -66,29 +66,61 @@ public class CustomEventSystem : MonoBehaviour
 
     private void UpdateHorizontal()
     {
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        if (GameManager.instance.loser.isPlayer1)
         {
-            MoveBack();
-            return;
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                MoveBack();
+                return;
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                MoveNext();
+                return;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        else
         {
-            MoveNext();
-            return;
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                MoveBack();
+                return;
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                MoveNext();
+                return;
+            }
         }
     }
 
     private void UpdateVertical()
     {
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (GameManager.instance.loser.isPlayer1)
         {
-            MoveNext();
-            return;
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                MoveBack();
+                return;
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                MoveNext();
+                return;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        else
         {
-            MoveBack();
-            return;
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                MoveBack();
+                return;
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                MoveNext();
+                return;
+            }
         }
     }
 

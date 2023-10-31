@@ -89,40 +89,55 @@ public class Ball : MonoBehaviour
     {
         GameObject thisObject = Instantiate(modifier, this.transform);
         thisObject.transform.parent = this.gameObject.transform;
+        ModifierParent pMod;
         BallModifier mod;
-        if (thisObject.TryGetComponent<BallModifier>(out mod))
+        if (thisObject.TryGetComponent<ModifierParent>(out pMod))
         {
-            if (mod.needsPlayerAssignment)
+            if (thisObject.TryGetComponent<BallModifier>(out mod))
             {
-                if (paddle == null)
-                {
-                    Debug.LogError("Trying to add a modifier with an activatable ability without assigning a player.");
-                    Destroy(thisObject);
-                    return;
-                }
-                mod.AssignPlayer(paddle);
                 if (mod.activateable)
                 {
-                    activateModifiers.Add(mod, paddle.isPlayer1);
+                    mod.needsPlayerAssignment = true;
                 }
-                else
-                {
-                    normalModifiers.Add(mod);
-                }
+            }
+            else
+            {
+                Debug.LogError("Trying to add a non-Ball Modifier as a Ball Modifier.");
+                Destroy(thisObject);
+                return;
+            }
+        }
+        else
+        {
+            Debug.LogError("Trying to add a non-modifier as a modifier.");
+            Destroy(thisObject);
+            return;
+        }
+        if (mod.needsPlayerAssignment)
+        {
+            if (paddle == null)
+            {
+                Debug.LogError("Trying to add a modifier with an activatable ability without assigning a player.");
+                Destroy(thisObject);
+                return;
+            }
+            mod.AssignPlayer(paddle);
+            if (mod.activateable)
+            {
+                activateModifiers.Add(mod, paddle.isPlayer1);
             }
             else
             {
                 normalModifiers.Add(mod);
             }
-            allModifiers.Add(mod);
-            mod.InitializeValues();
-            mod.StartModifierEffect();
         }
         else
         {
-            Destroy(thisObject);
-            Debug.LogError("Non Ball modifier was trying to be added as a modifier.");
+            normalModifiers.Add(mod);
         }
+        allModifiers.Add(mod);
+        mod.InitializeValues();
+        mod.StartModifierEffect();
     }
 
     public void TriggerParticleEffect()

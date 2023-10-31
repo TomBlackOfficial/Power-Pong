@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: 2
   modifierName: Active Speed Up
-  description: Active/nSpeed Up
+  description: Active\nSpeed Up
   icon: {fileID: 0}
   unique: 1
   activateable: 1
