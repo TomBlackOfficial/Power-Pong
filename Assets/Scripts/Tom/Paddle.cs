@@ -49,20 +49,23 @@ public class Paddle : MonoBehaviour
     private void Update()
     {
         bool activate = false;
-        if (isPlayer1)
+        if (!paralized)
         {
-            movement = Input.GetAxisRaw("Vertical_P1");
-            if (Input.GetAxisRaw("Action_P1") != 0)
+            if (isPlayer1)
             {
-                activate = true;
+                movement = Input.GetAxisRaw("Vertical_P1");
+                if (Input.GetAxisRaw("Action_P1") != 0)
+                {
+                    activate = true;
+                }
             }
-        }
-        else
-        {
-            movement = Input.GetAxisRaw("Vertical_P2");
-            if (Input.GetAxisRaw("Action_P2") != 0)
+            else
             {
-                activate = true;
+                movement = Input.GetAxisRaw("Vertical_P2");
+                if (Input.GetAxisRaw("Action_P2") != 0)
+                {
+                    activate = true;
+                }
             }
         }
         if (flipControls)

@@ -9,6 +9,7 @@ public class Gamemode : ScriptableObject
     public int scoreToWin = 7;
     public float startingBallSpeed = 4;
     public float startingPaddleSpeed = 5;
+    public int startingHP = 0;
     public enum GameType
     {
         Classic,

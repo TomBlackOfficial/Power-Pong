@@ -16,4 +16,5 @@ MonoBehaviour:
   scoreToWin: 6
   startingBallSpeed: 4
   startingPaddleSpeed: 5
+  startingHP: 6
   gameType: 1

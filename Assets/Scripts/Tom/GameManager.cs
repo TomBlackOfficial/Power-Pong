@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     public Animator cooldownAnim;
     public GameObject cardSelectionScreen;
     public Dictionary<Gamemode.GameType, GameObject> scorePanels = new Dictionary<Gamemode.GameType, GameObject>();
+    private List<UIHealthHelperScript> uiHelpers = new List<UIHealthHelperScript>();
 
     private int player1Score;
     private int player2Score;
@@ -59,6 +60,11 @@ public class GameManager : MonoBehaviour
                 scorePanels.Add(uiList[i].GetUIType(), uiList[i].gameObject);
             }
         }
+        if (gamemode.gameType == Gamemode.GameType.Health)
+        {
+            player1Score = gamemode.startingHP;
+            player2Score = gamemode.startingHP;
+        }
     }
 
     private void Start()
@@ -74,10 +80,24 @@ public class GameManager : MonoBehaviour
         }
         foreach (Gamemode.GameType type in scorePanels.Keys)
         {
-            if (type != gamemode.gameType)
+            scorePanels[type].SetActive(false);
+            if (type == gamemode.gameType)
             {
-                scorePanels[type].SetActive(false);
+                scorePanels[type].SetActive(true);
             }
+        }
+        switch (gamemode.gameType)
+        {
+            case Gamemode.GameType.Health:
+                UIHealthHelperScript[] helpers = scorePanels[Gamemode.GameType.Health].GetComponentsInChildren<UIHealthHelperScript>();
+                for (int h = 0; h < helpers.Length; h++)
+                {
+                    uiHelpers.Add(helpers[h]);
+                    helpers[h].UpdateHealth(gamemode.startingHP);
+                }
+                break;
+            default:
+                break;
         }
     }
 
@@ -85,44 +105,95 @@ public class GameManager : MonoBehaviour
     {
         if (playerID != 1 && playerID != 2)
             return;
+        switch (gamemode.gameType)
+        {
+            case Gamemode.GameType.Classic:
+                if (playerID == 1)
+                {
+                    winner = player1Paddle;
+                    loser = player2Paddle;
 
+                    player1Score++;
+                    player1Text.text = player1Score.ToString();
+                }
+                else if (playerID == 2)
+                {
+                    winner = player2Paddle;
+                    loser = player1Paddle;
+
+                    player2Score++;
+                    player2Text.text = player2Score.ToString();
+                }
+                break;
+            case Gamemode.GameType.Health:
+                if (playerID == 1)
+                {
+                    winner = player1Paddle;
+                    loser = player2Paddle;
+
+                    player2Score--;
+                    for (int ui = 0; ui < uiHelpers.Count; ui++)
+                    {
+                        if (!uiHelpers[ui].GetPlayer())
+                        {
+                            uiHelpers[ui].UpdateHealth(player2Score);
+                        }
+                    }
+                }
+                else if (playerID == 2)
+                {
+                    winner = player2Paddle;
+                    loser = player1Paddle;
+
+                    player1Score--;
+                    for (int ui = 0; ui < uiHelpers.Count; ui++)
+                    {
+                        if (uiHelpers[ui].GetPlayer())
+                        {
+                            uiHelpers[ui].UpdateHealth(player1Score);
+                        }
+                    }
+                }
+                break;
+        }
         // Checking which player won the round
-        if (playerID == 1)
-        {
-            winner = player1Paddle;
-            loser = player2Paddle;
-
-            player1Score++;
-            player1Text.text = player1Score.ToString();
-        }
-        else if (playerID == 2)
-        {
-            winner = player2Paddle;
-            loser = player1Paddle;
-
-            player2Score++;
-            player2Text.text = player2Score.ToString();
-        }
 
         CheckWinCondition();
     }
 
     private void CheckWinCondition()
     {
-        // If scoreToWin is set to 0 it means the game is infinite
-        if (gamemode.scoreToWin > 0)
+        switch (gamemode.gameType)
         {
-            // Check to see if either player won the game
-            if (player1Score >= gamemode.scoreToWin)
-            {
-                GameOver(1);
-                return;
-            }
-            else if (player2Score >= gamemode.scoreToWin)
-            {
-                GameOver(2);
-                return;
-            }
+            case Gamemode.GameType.Classic:
+                // If scoreToWin is set to 0 it means the game is infinite
+                if (gamemode.scoreToWin > 0)
+                {
+                    // Check to see if either player won the game
+                    if (player1Score >= gamemode.scoreToWin)
+                    {
+                        GameOver(1);
+                        return;
+                    }
+                    else if (player2Score >= gamemode.scoreToWin)
+                    {
+                        GameOver(2);
+                        return;
+                    }
+                }
+                break;
+            case Gamemode.GameType.Health:
+                if (player1Score <= 0)
+                {
+                    GameOver(2);
+                    return;
+                }
+                else if (player2Score <= 0)
+                {
+                    GameOver(1);
+                    return;
+                }
+                break;
         }
 
         SelectModifiers();
