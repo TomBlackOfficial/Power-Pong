@@ -44,8 +44,6 @@ public class Paddle : MonoBehaviour
     {
         manager = GameManager.instance;
         SetSpeed(manager.gamemode.startingPaddleSpeed);
-        myPS.Pause();
-        myPS.Clear();
     }
 
     private void Update()

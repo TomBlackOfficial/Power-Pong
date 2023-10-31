@@ -9,4 +9,10 @@ public class Gamemode : ScriptableObject
     public int scoreToWin = 7;
     public float startingBallSpeed = 4;
     public float startingPaddleSpeed = 5;
+    public enum GameType
+    {
+        Classic,
+        Health
+    }
+    public GameType gameType = GameType.Classic;
 }

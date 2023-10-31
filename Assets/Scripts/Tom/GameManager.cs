@@ -39,16 +39,26 @@ public class GameManager : MonoBehaviour
     public TextMesh player2Text;
     public Animator cooldownAnim;
     public GameObject cardSelectionScreen;
+    public Dictionary<Gamemode.GameType, GameObject> scorePanels = new Dictionary<Gamemode.GameType, GameObject>();
 
     private int player1Score;
     private int player2Score;
 
-    private Paddle loser;
-    private Paddle winner;
+    public Paddle loser { get; private set; }
+    public Paddle winner { get; private set; }
 
     private void Awake()
     {
         instance = this;
+        loser = player1Paddle;
+        UIType[] uiList = FindObjectsByType<UIType>(FindObjectsSortMode.None);
+        for (int i = 0; i < uiList.Length; i++)
+        {
+            if (!scorePanels.ContainsKey(uiList[i].GetUIType()))
+            {
+                scorePanels.Add(uiList[i].GetUIType(), uiList[i].gameObject);
+            }
+        }
     }
 
     private void Start()
@@ -61,6 +71,13 @@ public class GameManager : MonoBehaviour
         for (int p2m = 0; p2m < p2Modifier.Count; p2m++)
         {
             player2Paddle.AddModifier(p2Modifier[p2m]);
+        }
+        foreach (Gamemode.GameType type in scorePanels.Keys)
+        {
+            if (type != gamemode.gameType)
+            {
+                scorePanels[type].SetActive(false);
+            }
         }
     }
 

@@ -120,6 +120,38 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &26661249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26661250}
+  m_Layer: 0
+  m_Name: ClassicModeUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &26661250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26661249}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.519, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2005413624}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &195919329 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3290849610001160631, guid: ffa766089cfa73d4aa567d47a6b9df2f, type: 3}
@@ -354,6 +386,11 @@ TextMesh:
   m_CorrespondingSourceObject: {fileID: 4445563873727242549, guid: 9916d11c13ff24bc7927c134a4fe13a6, type: 3}
   m_PrefabInstance: {fileID: 7699961977069025942}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2005413624 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1278456196542564232, guid: 9916d11c13ff24bc7927c134a4fe13a6, type: 3}
+  m_PrefabInstance: {fileID: 7699961977069025942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1380349245418050087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -475,7 +512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2824751094597927794, guid: d103d322115954e94b66f6d4793cf11a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3486295552632344096, guid: d103d322115954e94b66f6d4793cf11a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -657,19 +694,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0
+      value: 0.20000002
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0
+      value: 0.055555556
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.8888889
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -852,14 +889,13 @@ MonoBehaviour:
   - playerToAffect: 2
     livesToGain: 0
     livesToSet: 1
-  ballModifier: {fileID: 0}
 --- !u!1001 &7699961977069025942
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 26661250}
     m_Modifications:
     - target: {fileID: 1278456196542564232, guid: 9916d11c13ff24bc7927c134a4fe13a6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -867,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1278456196542564232, guid: 9916d11c13ff24bc7927c134a4fe13a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.519
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1278456196542564232, guid: 9916d11c13ff24bc7927c134a4fe13a6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -995,7 +1031,7 @@ SceneRoots:
   - {fileID: 4865654965214993655}
   - {fileID: 2342582116504993535}
   - {fileID: 1380349245418050087}
-  - {fileID: 7699961977069025942}
+  - {fileID: 26661250}
   - {fileID: 6714884033798997586}
   - {fileID: 8479422350867615000}
   - {fileID: 6148072611046805172}

@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minMaxSpeed: {x: 5, y: 30}
   minMaxSize: {x: 0.5, y: 5}
-  particlesToEmitOnBurst: {x: 25, y: 50}
+  particlesToEmitOnBurst: {x: 5, y: 20}
 --- !u!96 &1883553501410460835
 TrailRenderer:
   serializedVersion: 3
@@ -479,9 +479,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 2
+      minMaxState: 0
       minColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.2509804, g: 0.2509804, b: 0.2509804, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
