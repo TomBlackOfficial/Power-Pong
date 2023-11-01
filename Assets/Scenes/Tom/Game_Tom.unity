@@ -556,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 195919329}
     - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: ballModifiers.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: 'ballModifiers.Array.data[0]'

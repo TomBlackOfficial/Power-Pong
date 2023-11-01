@@ -83,11 +83,11 @@ public class RandomModifierSelection : MonoBehaviour
                             validCard = true;
                             if (cardsTried.Contains(tempCard))
                             {
+                                validCard = false;
                                 if (cardsTried.Count >= modifierList.common.Count)
                                 {
                                     break;
                                 }
-                                validCard = false;
                                 continue;
                             }
                             else
@@ -127,7 +127,7 @@ public class RandomModifierSelection : MonoBehaviour
                                     }
                                 }
                             }
-                        } while (validCard);
+                        } while (!validCard);
                         cards.Add(tempCard);
                         cardAdded = true;
                         break;
@@ -182,7 +182,7 @@ public class RandomModifierSelection : MonoBehaviour
                                     }
                                 }
                             }
-                        } while (validCard);
+                        } while (!validCard);
                         cards.Add(tempCard);
                         cardAdded = true;
                         break;
@@ -237,7 +237,7 @@ public class RandomModifierSelection : MonoBehaviour
                                     }
                                 }
                             }
-                        } while (validCard);
+                        } while (!validCard);
                         cards.Add(tempCard);
                         cardAdded = true;
                         break;
@@ -292,7 +292,7 @@ public class RandomModifierSelection : MonoBehaviour
                                     }
                                 }
                             }
-                        } while (validCard);
+                        } while (!validCard);
                         cards.Add(tempCard);
                         cardAdded = true;
                         break;
