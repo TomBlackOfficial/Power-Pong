@@ -52,10 +52,10 @@ MonoBehaviour:
   icon: {fileID: 0}
   unique: 2
   activateable: 0
-  ballSpeedAdd: 0
-  ballSpeedMult: 1.25
+  ballSpeedAdd: 1
+  ballSpeedMult: 1.75
   ballSizeAdjustmentAdd: 0
-  ballSizeAdjustmentMult: 1.25
+  ballSizeAdjustmentMult: 1.1
   needsPlayerAssignment: 0
   ballColour: {r: 0.8113208, g: 0.20085199, b: 0.06505875, a: 1}
   trailColour:

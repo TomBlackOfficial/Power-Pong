@@ -181,6 +181,8 @@ MonoBehaviour:
   firstLaunch: 1
   arrowLength: 1
   arrowSpacing: 0.5
+  numberOfFlashes: 5
+  flashTotalWaitTime: 1.25
   particlesToEmitOnBurst: {x: 5, y: 20}
 --- !u!96 &1883553501410460835
 TrailRenderer:
@@ -5157,7 +5159,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6645529139441634315}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
