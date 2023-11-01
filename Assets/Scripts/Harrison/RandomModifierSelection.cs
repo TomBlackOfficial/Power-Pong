@@ -6,6 +6,13 @@ public class RandomModifierSelection : MonoBehaviour
 {
     public static RandomModifierSelection instance;
 
+    public enum PlayerWhoSelected
+    {
+        P1,
+        P2,
+        Both
+    }
+
     [SerializeField] private List<GameObject> masterList = new List<GameObject>();
     [SerializeField] [Range(0, 100)] private float rareChance = 20;
     [SerializeField] [Range(0, 100)] private float legendaryChance = 5;
@@ -56,40 +63,240 @@ public class RandomModifierSelection : MonoBehaviour
     }
     public List<GameObject> SelectedCards(int numberOfCards = 2)
     {
+        GameManager manager = GameManager.instance.GetComponent<GameManager>();
         List<GameObject> cards = new List<GameObject>();
         GameObject tempCard;
+        List<GameObject> cardsTried = new List<GameObject>();
+        bool validCard = true;
+        bool cardAdded = false;
         for (int c = 0; c < numberOfCards; c++)
         {
-            switch (SelectRarity())
+            cardAdded = false;
+            while (!cardAdded)
             {
-                case ModifierParent.ModifierRarity.Common:
-                    do 
-                    {
-                        tempCard = modifierList.common[Random.Range(0, modifierList.common.Count)];
-                    } while (cards.Contains(tempCard));
-                    cards.Add(tempCard);
-                    break;
-                case ModifierParent.ModifierRarity.Rare:
-                    do 
-                    {
-                        tempCard = modifierList.rare[Random.Range(0, modifierList.rare.Count)];
-                    } while (cards.Contains(tempCard));
-                    cards.Add(tempCard);
-                    break;
-                case ModifierParent.ModifierRarity.Legendary:
-                    do 
-                    {
-                        tempCard = modifierList.legendary[Random.Range(0, modifierList.legendary.Count)];
-                    } while (cards.Contains(tempCard));
-                    cards.Add(tempCard);
-                    break;
-                case ModifierParent.ModifierRarity.Mystic:
-                    do
-                    {
-                        tempCard = modifierList.mystic[Random.Range(0, modifierList.mystic.Count)];
-                    } while (cards.Contains(tempCard));
-                    cards.Add(tempCard);
-                    break;
+                switch (SelectRarity())
+                {
+                    case ModifierParent.ModifierRarity.Common:
+                        do 
+                        {
+                            tempCard = modifierList.common[Random.Range(0, modifierList.common.Count)];
+                            validCard = true;
+                            if (cardsTried.Contains(tempCard))
+                            {
+                                if (cardsTried.Count >= modifierList.common.Count)
+                                {
+                                    break;
+                                }
+                                validCard = false;
+                                continue;
+                            }
+                            else
+                            {
+                                cardsTried.Add(tempCard);
+                            }
+                            if (cards.Contains(tempCard))
+                            {
+                                validCard = false;
+                                continue;
+                            }
+                            if (tempCard.GetComponent<ModifierParent>().unique != ModifierParent.Unique.NotUnique)
+                            {
+                                if (tempCard.GetComponent<ModifierParent>().unique == ModifierParent.Unique.ChoosingPlayer)
+                                {
+                                    if (manager.pickedModifiers.ContainsKey(tempCard.name))
+                                    {
+                                        if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.Both)
+                                        {
+                                            validCard = false;
+                                        }
+                                        else if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.P1 && manager.loser.isPlayer1)
+                                        {
+                                            validCard = false;
+                                        }
+                                        else if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.P2 && !manager.loser.isPlayer1)
+                                        {
+                                            validCard = false;
+                                        }
+                                    }
+                                }
+                                else if (tempCard.GetComponent<ModifierParent>().unique == ModifierParent.Unique.ForWholeGame)
+                                {
+                                    if (manager.pickedModifiers.ContainsKey(tempCard.name))
+                                    {
+                                        validCard = false;
+                                    }
+                                }
+                            }
+                        } while (validCard);
+                        cards.Add(tempCard);
+                        cardAdded = true;
+                        break;
+                    case ModifierParent.ModifierRarity.Rare:
+                        do
+                        {
+                            tempCard = modifierList.rare[Random.Range(0, modifierList.rare.Count)];
+                            validCard = true;
+                            if (cardsTried.Contains(tempCard))
+                            {
+                                if (cardsTried.Count >= modifierList.rare.Count)
+                                {
+                                    break;
+                                }
+                                validCard = false;
+                                continue;
+                            }
+                            else
+                            {
+                                cardsTried.Add(tempCard);
+                            }
+                            if (cards.Contains(tempCard))
+                            {
+                                validCard = false;
+                                continue;
+                            }
+                            if (tempCard.GetComponent<ModifierParent>().unique != ModifierParent.Unique.NotUnique)
+                            {
+                                if (tempCard.GetComponent<ModifierParent>().unique == ModifierParent.Unique.ChoosingPlayer)
+                                {
+                                    if (manager.pickedModifiers.ContainsKey(tempCard.name))
+                                    {
+                                        if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.Both)
+                                        {
+                                            validCard = false;
+                                        }
+                                        else if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.P1 && manager.loser.isPlayer1)
+                                        {
+                                            validCard = false;
+                                        }
+                                        else if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.P2 && !manager.loser.isPlayer1)
+                                        {
+                                            validCard = false;
+                                        }
+                                    }
+                                }
+                                else if (tempCard.GetComponent<ModifierParent>().unique == ModifierParent.Unique.ForWholeGame)
+                                {
+                                    if (manager.pickedModifiers.ContainsKey(tempCard.name))
+                                    {
+                                        validCard = false;
+                                    }
+                                }
+                            }
+                        } while (validCard);
+                        cards.Add(tempCard);
+                        cardAdded = true;
+                        break;
+                    case ModifierParent.ModifierRarity.Legendary:
+                        do
+                        {
+                            tempCard = modifierList.legendary[Random.Range(0, modifierList.legendary.Count)];
+                            validCard = true;
+                            if (cardsTried.Contains(tempCard))
+                            {
+                                if (cardsTried.Count >= modifierList.legendary.Count)
+                                {
+                                    break;
+                                }
+                                validCard = false;
+                                continue;
+                            }
+                            else
+                            {
+                                cardsTried.Add(tempCard);
+                            }
+                            if (cards.Contains(tempCard))
+                            {
+                                validCard = false;
+                                continue;
+                            }
+                            if (tempCard.GetComponent<ModifierParent>().unique != ModifierParent.Unique.NotUnique)
+                            {
+                                if (tempCard.GetComponent<ModifierParent>().unique == ModifierParent.Unique.ChoosingPlayer)
+                                {
+                                    if (manager.pickedModifiers.ContainsKey(tempCard.name))
+                                    {
+                                        if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.Both)
+                                        {
+                                            validCard = false;
+                                        }
+                                        else if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.P1 && manager.loser.isPlayer1)
+                                        {
+                                            validCard = false;
+                                        }
+                                        else if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.P2 && !manager.loser.isPlayer1)
+                                        {
+                                            validCard = false;
+                                        }
+                                    }
+                                }
+                                else if (tempCard.GetComponent<ModifierParent>().unique == ModifierParent.Unique.ForWholeGame)
+                                {
+                                    if (manager.pickedModifiers.ContainsKey(tempCard.name))
+                                    {
+                                        validCard = false;
+                                    }
+                                }
+                            }
+                        } while (validCard);
+                        cards.Add(tempCard);
+                        cardAdded = true;
+                        break;
+                    case ModifierParent.ModifierRarity.Mystic:
+                        do
+                        {
+                            tempCard = modifierList.mystic[Random.Range(0, modifierList.mystic.Count)];
+                            validCard = true;
+                            if (cardsTried.Contains(tempCard))
+                            {
+                                if (cardsTried.Count >= modifierList.mystic.Count)
+                                {
+                                    break;
+                                }
+                                validCard = false;
+                                continue;
+                            }
+                            else
+                            {
+                                cardsTried.Add(tempCard);
+                            }
+                            if (cards.Contains(tempCard))
+                            {
+                                validCard = false;
+                                continue;
+                            }
+                            if (tempCard.GetComponent<ModifierParent>().unique != ModifierParent.Unique.NotUnique)
+                            {
+                                if (tempCard.GetComponent<ModifierParent>().unique == ModifierParent.Unique.ChoosingPlayer)
+                                {
+                                    if (manager.pickedModifiers.ContainsKey(tempCard.name))
+                                    {
+                                        if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.Both)
+                                        {
+                                            validCard = false;
+                                        }
+                                        else if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.P1 && manager.loser.isPlayer1)
+                                        {
+                                            validCard = false;
+                                        }
+                                        else if (manager.pickedModifiers[tempCard.name] == PlayerWhoSelected.P2 && !manager.loser.isPlayer1)
+                                        {
+                                            validCard = false;
+                                        }
+                                    }
+                                }
+                                else if (tempCard.GetComponent<ModifierParent>().unique == ModifierParent.Unique.ForWholeGame)
+                                {
+                                    if (manager.pickedModifiers.ContainsKey(tempCard.name))
+                                    {
+                                        validCard = false;
+                                    }
+                                }
+                            }
+                        } while (validCard);
+                        cards.Add(tempCard);
+                        cardAdded = true;
+                        break;
+                }
             }
         }
         return cards;

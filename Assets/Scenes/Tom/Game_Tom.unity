@@ -554,6 +554,14 @@ PrefabInstance:
       propertyPath: cardSelectionScreen
       value: 
       objectReference: {fileID: 195919329}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: ballModifiers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: 'ballModifiers.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4939051390042414249, guid: df86f6f1d7fefe046bae3b062fe2cb6d, type: 3}
     - target: {fileID: 5122752482957328812, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -566,6 +574,22 @@ PrefabInstance:
       propertyPath: legendaryChance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5319193525307417449, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: masterList.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319193525307417449, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: 'masterList.Array.data[15]'
+      value: 
+      objectReference: {fileID: 6788226015703101992, guid: 6a921de1698de484aa32f2b33b72ee69, type: 3}
+    - target: {fileID: 5319193525307417449, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: 'masterList.Array.data[16]'
+      value: 
+      objectReference: {fileID: 3914118727443007848, guid: f6d48dfd50975cf46808ea5615c2a232, type: 3}
+    - target: {fileID: 5319193525307417449, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: 'masterList.Array.data[17]'
+      value: 
+      objectReference: {fileID: 2912717037336457181, guid: db8ff7630f267f2499bddd6545850a56, type: 3}
     - target: {fileID: 5622107270330712331, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7653095
@@ -631,7 +655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2824751094597927794, guid: d103d322115954e94b66f6d4793cf11a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3486295552632344096, guid: d103d322115954e94b66f6d4793cf11a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -870,19 +894,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.20000002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.055555556
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.8888889
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

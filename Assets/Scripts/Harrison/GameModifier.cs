@@ -13,13 +13,12 @@ public class GameModifier : ModifierParent
     [System.Serializable]
     public struct PlayerEffect
     {
-        public PlayerToAffect playerToAffect;
+        public PlayerModifier.PlayerToAffect playerToAffect;
         public int livesToGain;
         public int livesToSet;
     }
     [Header("Game Stats")]
     [SerializeField] private GameManager manager;
-    [SerializeField] private PlayerToAffect playerToAffect;
     [Header("Player Stats")]
     [SerializeField] private List<PlayerEffect> player = new List<PlayerEffect>();
 
@@ -27,7 +26,7 @@ public class GameModifier : ModifierParent
     {
         base.StartModifierEffect();
         manager = GetComponentInParent<GameManager>();
-        List<PlayerToAffect> tempList = new List<PlayerToAffect>();
+        List<PlayerModifier.PlayerToAffect> tempList = new List<PlayerModifier.PlayerToAffect>();
         for (int p = 0; p < player.Count; p++)
         {
             if (!tempList.Contains(player[p].playerToAffect))
@@ -35,11 +34,11 @@ public class GameModifier : ModifierParent
                 tempList.Add(player[p].playerToAffect);
                 if (player[p].livesToGain != null && player[p].livesToGain != 0)
                 {
-                    //manager.AddLives(player[p].playerToAffect, player[p].livesToGain);
+                    manager.AddSubtractLives(player[p].playerToAffect, player[p].livesToGain);
                 }
                 if (player[p].livesToSet != null && player[p].livesToSet > 0)
                 {
-                    //manager.SetLives(player[p].playerToAffect, player[p].livesToSet);
+                    manager.SetLives(player[p].playerToAffect, player[p].livesToSet);
                 }
             }
         }

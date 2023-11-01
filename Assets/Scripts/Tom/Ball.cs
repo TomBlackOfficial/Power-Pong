@@ -16,13 +16,18 @@ public class Ball : MonoBehaviour
     private List<BallModifier> allModifiers = new List<BallModifier>();
     private List<BallModifier> normalModifiers = new List<BallModifier>();
     private Dictionary<BallModifier, bool> activateModifiers = new Dictionary<BallModifier, bool>();
+    public bool firstLaunch = true;
+    [SerializeField] private float arrowLength = 2f;
+    [SerializeField] private float arrowSpacing = 0.5f;
+    [SerializeField] private int numberOfFlashes = 3;
+    [SerializeField] private float flashTotalWaitTime = 0.75f;
 
     private ParticleSystem myPS;
     [SerializeField] private Vector2Int particlesToEmitOnBurst = new Vector2Int(50, 75);
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        myPS = GetComponentInChildren<ParticleSystem>();
+        myPS = GetComponent<ParticleSystem>();
         startPosition = transform.position;
     }
 
@@ -50,10 +55,8 @@ public class Ball : MonoBehaviour
         return minMaxSpeed;
     }
 
-    public void Launch()
+    public void Launch(float x, float y)
     {
-        float x = Random.Range(0, 2) == 0 ? -1 : 1;
-        float y = Random.Range(0, 2) == 0 ? -1 : 1;
         rb.velocity = new Vector2(speed * x, speed * y);
         gameObject.transform.localScale = new Vector3(size, size, 1);
         //AudioManager.instance.PlayLaunchSound();
@@ -61,9 +64,34 @@ public class Ball : MonoBehaviour
 
     IEnumerator LaunchDelay()
     {
-        yield return new WaitForSeconds(0.5f);
-
-        Launch();
+        yield return null;
+        LineRenderer lRenderer = GetComponent<LineRenderer>();
+        float x = 0;
+        if (firstLaunch)
+        {
+            x = Random.Range(0, 2) == 0 ? -1 : 1;
+        }
+        else
+        {
+            if (GameManager.instance.loser.isPlayer1)
+            {
+                x = -1;
+            }
+            else
+            {
+                x = 1;
+            }
+        }
+        float y = Random.Range(0, 2) == 0 ? -1 : 1;
+        lRenderer.enabled = true;
+        lRenderer.SetPositions(new Vector3[] { new Vector3(x * arrowSpacing, y * arrowSpacing, 0), new Vector3((x * arrowSpacing) + (x * arrowLength), (y * arrowSpacing) + (y * arrowLength), 0) });
+        for (int f = 0; f < numberOfFlashes; f++)
+        {
+            yield return new WaitForSeconds(flashTotalWaitTime / (float)numberOfFlashes);
+            lRenderer.enabled = !lRenderer.enabled;
+        }
+        lRenderer.enabled = false;
+        Launch(x, y);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
