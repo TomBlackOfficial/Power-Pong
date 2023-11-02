@@ -248,7 +248,7 @@ MonoBehaviour:
   - {fileID: 7642035811385154428, guid: 92ad0f949288dc04282e8ede4c15c2da, type: 3}
   rareChance: 15
   legendaryChance: 5
-  mysticChance: 0.25
+  mysticChance: 2.5
 --- !u!1 &5743948064056445751
 GameObject:
   m_ObjectHideFlags: 0
