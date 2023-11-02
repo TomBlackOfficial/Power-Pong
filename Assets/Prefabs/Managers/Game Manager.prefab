@@ -201,7 +201,8 @@ MonoBehaviour:
   ball: {fileID: 0}
   ballModifiers: []
   ballSlowmodeSpeed: 0.01
-  goalExplosion: {fileID: 1441777817391613718, guid: c72a808766fd1be4ea9d35a6a71abe52, type: 3}
+  goalExplosionPrefab: {fileID: 1441777817391613718, guid: c72a808766fd1be4ea9d35a6a71abe52, type: 3}
+  explosionTime: 2.5
   player1Paddle: {fileID: 0}
   player1Goal: {fileID: 0}
   p1Modifier: []
