@@ -500,7 +500,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      card_anim-Sheet_0: -5252835704761370661
+      card_anim-Sheet_1: -528709706398375600
+      card_anim-Sheet_10: 8399548772090781648
+      card_anim-Sheet_11: -880225984586746726
+      card_anim-Sheet_12: -7032342053912189375
+      card_anim-Sheet_13: 6941791648161013474
+      card_anim-Sheet_14: 2679559962306133710
+      card_anim-Sheet_15: 5365572600056108421
+      card_anim-Sheet_2: -6705204262063470552
+      card_anim-Sheet_3: 1496157447308234673
+      card_anim-Sheet_4: -4425681137563141140
+      card_anim-Sheet_5: 6645287505557692341
+      card_anim-Sheet_6: -5314752512574210035
+      card_anim-Sheet_7: -6409506594063631703
+      card_anim-Sheet_8: -8730351187686545297
+      card_anim-Sheet_9: -5920199547885673805
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

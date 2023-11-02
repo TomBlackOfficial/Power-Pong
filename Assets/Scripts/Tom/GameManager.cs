@@ -52,6 +52,8 @@ public class GameManager : MonoBehaviour
     public Color rareColour;
     public Color legendaryColour;
     public Color mysticColour;
+    public Color p1Colour;
+    public Color p2Colour;
     
 
     private int player1Score;

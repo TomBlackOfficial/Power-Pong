@@ -21,6 +21,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private float arrowSpacing = 0.5f;
     [SerializeField] private int numberOfFlashes = 3;
     [SerializeField] private float flashTotalWaitTime = 0.75f;
+    [SerializeField] private SpriteRenderer arrowRenderer;
 
     private ParticleSystem myPS;
     [SerializeField] private Vector2Int particlesToEmitOnBurst = new Vector2Int(50, 75);
@@ -65,7 +66,7 @@ public class Ball : MonoBehaviour
     IEnumerator LaunchDelay()
     {
         yield return null;
-        LineRenderer lRenderer = GetComponent<LineRenderer>();
+        Color arrowColour = Color.white;
         float x = 0;
         if (firstLaunch)
         {
@@ -82,15 +83,25 @@ public class Ball : MonoBehaviour
                 x = 1;
             }
         }
+        if (x < 0)
+        {
+            arrowColour = GameManager.instance.p1Colour;
+        }
+        else
+        {
+            arrowColour = GameManager.instance.p2Colour;
+        }
         float y = Random.Range(0, 2) == 0 ? -1 : 1;
-        lRenderer.enabled = true;
-        lRenderer.SetPositions(new Vector3[] { new Vector3(x * arrowSpacing, y * arrowSpacing, 0), new Vector3((x * arrowSpacing) + (x * arrowLength), (y * arrowSpacing) + (y * arrowLength), 0) });
+        arrowRenderer.enabled = true;
+        arrowRenderer.color = arrowColour;
+        arrowRenderer.gameObject.transform.position = new Vector3(x * arrowSpacing, y * arrowSpacing, 0);
+        arrowRenderer.gameObject.transform.up = new Vector3(x, y, 0);
         for (int f = 0; f < numberOfFlashes; f++)
         {
             yield return new WaitForSeconds(flashTotalWaitTime / (float)numberOfFlashes);
-            lRenderer.enabled = !lRenderer.enabled;
+            arrowRenderer.enabled = !arrowRenderer.enabled;
         }
-        lRenderer.enabled = false;
+        arrowRenderer.enabled = false;
         Launch(x, y);
     }
 
