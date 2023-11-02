@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: a3face08435d1084bb661297ed139baf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7930223749129263124
+    second: cardsNew_0
+  - first:
+      213: -814799153993636562
+    second: cardsNew_1
+  - first:
+      213: 503621099550169793
+    second: cardsNew_2
+  - first:
+      213: 5760741154877363078
+    second: cardsNew_3
+  - first:
+      213: 3491699038157088347
+    second: cardsNew_4
+  - first:
+      213: -8027897442693704596
+    second: cardsNew_5
+  - first:
+      213: 838798310067903660
+    second: cardsNew_6
+  - first:
+      213: 8952631816707121708
+    second: cardsNew_7
+  - first:
+      213: -3557618427967354821
+    second: cardsNew_8
+  - first:
+      213: -4868853464983976784
+    second: cardsNew_9
+  - first:
+      213: -4448389294678391473
+    second: cardsNew_10
+  - first:
+      213: 6401627923958933814
+    second: cardsNew_11
+  - first:
+      213: 6538891844517296680
+    second: cardsNew_12
+  - first:
+      213: -4764474951012045242
+    second: cardsNew_13
+  - first:
+      213: -1487088171480131134
+    second: cardsNew_14
+  - first:
+      213: -9196862125510800989
+    second: cardsNew_15
+  - first:
+      213: 2578013809813792325
+    second: cardsNew_16
+  - first:
+      213: -913197883673339922
+    second: cardsNew_17
+  - first:
+      213: -7799944304762335066
+    second: cardsNew_18
+  - first:
+      213: 1953772311989120723
+    second: cardsNew_19
+  - first:
+      213: -8404041371302833108
+    second: cardsNew_20
+  - first:
+      213: 8208200578069442789
+    second: cardsNew_21
+  - first:
+      213: 4064560114710883488
+    second: cardsNew_22
+  - first:
+      213: -312767914725937812
+    second: cardsNew_23
+  - first:
+      213: -7351040639959740879
+    second: cardsNew_24
+  - first:
+      213: -8284754180197525145
+    second: cardsNew_25
+  - first:
+      213: 3669316290202309687
+    second: cardsNew_26
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: common0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 162
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e25abe68c7041b4f0800000000000000
+      internalID: -814799153993636562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rare0
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 162
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca5414c8b83df600800000000000000
+      internalID: 503621099550169793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: epic0
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 162
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68350730f8342ff40800000000000000
+      internalID: 5760741154877363078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mythic0
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 162
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b562def76c1057030800000000000000
+      internalID: 3491699038157088347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6499fa3fcd279090800000000000000
+      internalID: -8027897442693704596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 82
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cac9bcd6e9204ab00800000000000000
+      internalID: 838798310067903660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rare1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 82
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2220b744332e3c70800000000000000
+      internalID: 8952631816707121708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: epic1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 82
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b384f9a83ecc0aec0800000000000000
+      internalID: -3557618427967354821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mythic1
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 82
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b44334e19b5e6cb0800000000000000
+      internalID: -4868853464983976784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 158
+        width: 41
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154b29a8e5c90e44a82df3c281bd642a
+      internalID: 968874897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666ad5d6262fa4e4997ebe7105d2c57e
+      internalID: -4448389294678391473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 10
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83cba8c474081864fb7809f7ba6e2349
+      internalID: 6401627923958933814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rare2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 10
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a50299a873488849bfca448756b746f
+      internalID: 6538891844517296680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: epic2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 10
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232da6b903830fd4aaa56b9ed8991fc1
+      internalID: -4764474951012045242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mythic2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 10
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ba3815d44b0ab4889c753ec82e1dce
+      internalID: -1487088171480131134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3c0fa427a85dd8249a9531dff0b80bd2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bg0: 968874897
+      bg1: -8027897442693704596
+      bg2: -4448389294678391473
+      common0: -814799153993636562
+      common1: 838798310067903660
+      common2: 6401627923958933814
+      epic0: 5760741154877363078
+      epic1: -3557618427967354821
+      epic2: -4764474951012045242
+      mythic0: 3491699038157088347
+      mythic1: -4868853464983976784
+      mythic2: -1487088171480131134
+      rare0: 503621099550169793
+      rare1: 8952631816707121708
+      rare2: 6538891844517296680
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
