@@ -164,6 +164,11 @@ public class CustomEventSystem : MonoBehaviour
 
     private void MoveNext()
     {
+        if (AudioManager.instance)
+        {
+            AudioManager.instance.PlayMenuSound();
+        }
+
         if (selectedButton != buttons[buttons.Length - 1])
         {
             SetSelectedButton(buttons[Array.IndexOf(buttons, selectedButton) + 1]);
@@ -184,6 +189,11 @@ public class CustomEventSystem : MonoBehaviour
 
     private void MoveBack()
     {
+        if (AudioManager.instance)
+        {
+            AudioManager.instance.PlayMenuSound();
+        }
+
         if (selectedButton != buttons[0])
         {
             SetSelectedButton(buttons[Array.IndexOf(buttons, selectedButton) - 1]);

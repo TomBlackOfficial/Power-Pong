@@ -47,13 +47,11 @@ MonoBehaviour:
   rarity: 3
   modifierName: Sudden Death
   description: Sudden\nDeath
-  icon: {fileID: 0}
+  icon: {fileID: -1232942333, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
   unique: 2
   activateable: 0
   manager: {fileID: 0}
-  playerToAffect: 2
   player:
   - playerToAffect: 2
     livesToGain: 0
     livesToSet: 1
-  ballModifier: {fileID: 0}

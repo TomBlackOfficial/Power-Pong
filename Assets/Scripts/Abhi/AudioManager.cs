@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     public AudioSource audioSource;
 
-    [SerializeField] private AudioClip hit1, hit2, hit3, score;  
+    [SerializeField] private AudioClip menu1, menu2, menu3, launch1, launch2, hit1, hit2, hit3, score;
 
     private void Awake()
     {
@@ -36,9 +36,32 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.PlayOneShot(score);
     }
-    
+
     public void PlayHitSidesSound()
     {
         audioSource.PlayOneShot(hit3);
+    }
+
+    public void PlayMenuSound()
+    {
+        float rand = Random.Range(0, 3);
+
+        switch (rand)
+        {
+            case 0:
+                audioSource.PlayOneShot(menu1);
+                break;
+            case 1:
+                audioSource.PlayOneShot(menu2);
+                break;
+            case 2:
+                audioSource.PlayOneShot(menu3);
+                break;
+        }
+    }
+
+    public void PlayLaunchSound()
+    {
+        audioSource.PlayOneShot(Random.value < 0.5 ? launch1 : launch2);
     }
 }

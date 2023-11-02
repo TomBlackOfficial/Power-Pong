@@ -47,7 +47,7 @@ MonoBehaviour:
   rarity: 0
   modifierName: Fast Paddle
   description: Faster\nPaddle.
-  icon: {fileID: 0}
+  icon: {fileID: -1812229245, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
   unique: 0
   activateable: 0
   playerToAffect: 0

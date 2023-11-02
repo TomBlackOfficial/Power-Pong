@@ -68,6 +68,11 @@ public class CustomButton : MonoBehaviour
                     onClickUp.Invoke();
                     pressed = false;
                     selected = true;
+
+                    if (AudioManager.instance)
+                    {
+                        AudioManager.instance.PlayLaunchSound();
+                    }
                 }
             }
             else
@@ -82,6 +87,11 @@ public class CustomButton : MonoBehaviour
                     onClickUp.Invoke();
                     pressed = false;
                     selected = true;
+
+                    if (AudioManager.instance)
+                    {
+                        AudioManager.instance.PlayLaunchSound();
+                    }
                 }
             }
         }
@@ -90,13 +100,18 @@ public class CustomButton : MonoBehaviour
             if (Input.GetButtonDown("Action") && highlighted)
             {
                 onClickDown.Invoke();
-                pressed = true;
+                pressed = true;                
             }
             else if (Input.GetButtonUp("Action") && highlighted)
             {
                 onClickUp.Invoke();
                 pressed = false;
                 selected = true;
+
+                if (AudioManager.instance)
+                {
+                    AudioManager.instance.PlayLaunchSound();
+                }
             }
         }
         CalculateCurrentState();

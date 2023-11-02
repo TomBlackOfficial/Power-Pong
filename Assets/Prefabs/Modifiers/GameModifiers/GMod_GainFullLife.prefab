@@ -47,13 +47,11 @@ MonoBehaviour:
   rarity: 1
   modifierName: Tank Up
   description: Tank\nUp
-  icon: {fileID: 0}
+  icon: {fileID: 1288285957, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
   unique: 0
   activateable: 0
   manager: {fileID: 0}
-  playerToAffect: 0
   player:
   - playerToAffect: 0
     livesToGain: 2
     livesToSet: 0
-  ballModifier: {fileID: 0}
