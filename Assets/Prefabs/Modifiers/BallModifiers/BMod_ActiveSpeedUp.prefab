@@ -47,7 +47,7 @@ MonoBehaviour:
   rarity: 2
   modifierName: Active Speed Up
   description: Active\nSpeed Up
-  icon: {fileID: 0}
+  icon: {fileID: 1370904856, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
   unique: 1
   activateable: 1
   ballSpeedAdd: 0

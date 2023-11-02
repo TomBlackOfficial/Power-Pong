@@ -47,7 +47,7 @@ MonoBehaviour:
   rarity: 1
   modifierName: Slippy
   description: Slippy
-  icon: {fileID: 0}
+  icon: {fileID: 266990636, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
   unique: 1
   activateable: 0
   playerToAffect: 1

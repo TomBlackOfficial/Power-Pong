@@ -47,11 +47,11 @@ MonoBehaviour:
   rarity: 0
   modifierName: Slower Ball
   description: Slower\nBall.
-  icon: {fileID: 0}
+  icon: {fileID: 2006468414, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
   unique: 0
   activateable: 0
-  myBall: {fileID: 0}
   ballSpeedAdd: -1
   ballSpeedMult: 1
   ballSizeAdjustmentAdd: 0
   ballSizeAdjustmentMult: 1
+  needsPlayerAssignment: 0
