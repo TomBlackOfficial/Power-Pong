@@ -70,11 +70,15 @@ public class CustomEventSystem : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
+                if (AudioManager.instance)
+                    AudioManager.instance.PlayMenuSound();
                 MoveBack();
                 return;
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
+                if (AudioManager.instance)
+                    AudioManager.instance.PlayMenuSound();
                 MoveNext();
                 return;
             }
@@ -83,11 +87,15 @@ public class CustomEventSystem : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
+                if (AudioManager.instance)
+                    AudioManager.instance.PlayMenuSound();
                 MoveBack();
                 return;
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
+                if (AudioManager.instance)
+                    AudioManager.instance.PlayMenuSound();
                 MoveNext();
                 return;
             }
@@ -100,11 +108,15 @@ public class CustomEventSystem : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
+                if (AudioManager.instance)
+                    AudioManager.instance.PlayMenuSound();
                 MoveBack();
                 return;
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
+                if (AudioManager.instance)
+                    AudioManager.instance.PlayMenuSound();
                 MoveNext();
                 return;
             }
@@ -113,11 +125,15 @@ public class CustomEventSystem : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                if (AudioManager.instance)
+                    AudioManager.instance.PlayMenuSound();
                 MoveBack();
                 return;
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
+                if (AudioManager.instance)
+                    AudioManager.instance.PlayMenuSound();
                 MoveNext();
                 return;
             }

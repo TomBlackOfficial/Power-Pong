@@ -66,6 +66,9 @@ public class CustomButton : MonoBehaviour
                 onClickUp.Invoke();
                 pressed = false;
                 selected = true;
+
+                if(AudioManager.instance)
+                AudioManager.instance.PlayLaunchSound();
             }
         }
         else
@@ -80,6 +83,9 @@ public class CustomButton : MonoBehaviour
                 onClickUp.Invoke();
                 pressed = false;
                 selected = true;
+
+                if (AudioManager.instance)
+                    AudioManager.instance.PlayLaunchSound();
             }
         }
 

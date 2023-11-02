@@ -59,7 +59,7 @@ public class Ball : MonoBehaviour
     {
         rb.velocity = new Vector2(speed * x, speed * y);
         gameObject.transform.localScale = new Vector3(size, size, 1);
-        //AudioManager.instance.PlayLaunchSound();
+        AudioManager.instance.PlayLaunchSound();
     }
 
     IEnumerator LaunchDelay()
