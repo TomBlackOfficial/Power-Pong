@@ -199,7 +199,7 @@ MonoBehaviour:
   gamemode: {fileID: 11400000, guid: f96af20163d684f0482805b1c2f678d9, type: 2}
   ballPrefab: {fileID: 7476110331775010831, guid: be07a624521e048cb88ef211771f6562, type: 3}
   ball: {fileID: 0}
-  ballModifiers: []
+  ballStartingModifiers: []
   ballSlowmodeSpeed: 0.01
   goalExplosionPrefab: {fileID: 1441777817391613718, guid: c72a808766fd1be4ea9d35a6a71abe52, type: 3}
   explosionTime: 1.5
@@ -219,6 +219,8 @@ MonoBehaviour:
   rareColour: {r: 0.16078432, g: 0.5882353, b: 1, a: 1}
   legendaryColour: {r: 0.6431373, g: 0.32941177, b: 0.8980393, a: 1}
   mysticColour: {r: 0.9450981, g: 0.2901961, b: 0.08627451, a: 1}
+  p1Colour: {r: 0, g: 0.7058824, b: 1, a: 1}
+  p2Colour: {r: 1, g: 0.6, b: 0, a: 1}
 --- !u!114 &5319193525307417449
 MonoBehaviour:
   m_ObjectHideFlags: 0
