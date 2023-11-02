@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CustomEventSystem : MonoBehaviour
 {
+    public static CustomEventSystem instance;
+
     public enum SortingModes
     {
         Horizontal,
@@ -24,9 +26,17 @@ public class CustomEventSystem : MonoBehaviour
 
     private void Awake()
     {
-        if (buttons.Length <= 0)
+        if (instance != null)
         {
-            buttons = GetComponentsInChildren<CustomButton>();
+            Destroy(gameObject);
+            Destroy(this);
+        }
+        else
+        {
+            if (buttons.Length <= 0)
+            {
+                buttons = GetComponentsInChildren<CustomButton>();
+            }
         }
     }
 

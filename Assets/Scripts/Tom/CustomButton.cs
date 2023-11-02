@@ -54,7 +54,7 @@ public class CustomButton : MonoBehaviour
     {
         if (!interactable)
             return;
-        if (GameManager.instance.loser.isPlayer1)
+        if (GameManager.instance != null)
         {
             if (GameManager.instance.loser.isPlayer1)
             {
@@ -100,28 +100,9 @@ public class CustomButton : MonoBehaviour
             if (Input.GetButtonDown("Action") && highlighted)
             {
                 onClickDown.Invoke();
-                pressed = true;                
-            }
-            else if (Input.GetButtonUp("Action_P1") && highlighted)
-            {
-                onClickUp.Invoke();
-                pressed = false;
-                selected = true;
-
-                if (AudioManager.instance)
-                {
-                    AudioManager.instance.PlayLaunchSound();
-                }
-            }
-        }
-        else
-        {
-            if (Input.GetButtonDown("Action_P2") && highlighted)
-            {
-                onClickDown.Invoke();
                 pressed = true;
             }
-            else if (Input.GetButtonUp("Action_P2") && highlighted)
+            else if (Input.GetButtonUp("Action") && highlighted)
             {
                 onClickUp.Invoke();
                 pressed = false;
