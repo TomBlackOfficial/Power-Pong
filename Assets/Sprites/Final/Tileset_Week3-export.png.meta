@@ -1,10 +1,67 @@
 fileFormatVersion: 2
-guid: 1604f0c90d0c7b445a529ec3997170ca
+guid: 7c155d131fb466f41b7ff360f96a98d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4336937932093799340
-    second: Tileset_Week2_0
+      213: -8703816465769904855
+    second: Tileset_Week3-export_0
+  - first:
+      213: 276955239318592742
+    second: Tileset_Week3-export_1
+  - first:
+      213: -7675185647427393670
+    second: Tileset_Week3-export_2
+  - first:
+      213: 7533401243844086414
+    second: Tileset_Week3-export_3
+  - first:
+      213: -1117067888503363556
+    second: Tileset_Week3-export_4
+  - first:
+      213: -1419478966042442550
+    second: Tileset_Week3-export_5
+  - first:
+      213: 1730349673844514895
+    second: Tileset_Week3-export_6
+  - first:
+      213: -788533157022592125
+    second: Tileset_Week3-export_7
+  - first:
+      213: 7491029139800662210
+    second: Tileset_Week3-export_8
+  - first:
+      213: 6309878536928387401
+    second: Tileset_Week3-export_9
+  - first:
+      213: 4004916285500449168
+    second: Tileset_Week3-export_10
+  - first:
+      213: -6586571231147456770
+    second: Tileset_Week3-export_11
+  - first:
+      213: -1442056235623539980
+    second: Tileset_Week3-export_12
+  - first:
+      213: -3494593856378336793
+    second: Tileset_Week3-export_13
+  - first:
+      213: -4622895748209419221
+    second: Tileset_Week3-export_14
+  - first:
+      213: 7347596023780532787
+    second: Tileset_Week3-export_15
+  - first:
+      213: -5825496444307539286
+    second: Tileset_Week3-export_16
+  - first:
+      213: -5721503761733436152
+    second: Tileset_Week3-export_17
+  - first:
+      213: -6253774204332786661
+    second: Tileset_Week3-export_18
+  - first:
+      213: 277992871995313752
+    second: Tileset_Week3-export_19
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -83,7 +140,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -95,7 +152,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -114,18 +171,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
-        width: 16
-        height: 16
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cab3e573216ef2c30800000000000000
-      internalID: 4336937932093799340
+      spriteID: 925c6970a05d53780800000000000000
+      internalID: -8703816465769904855
       vertices: []
       indices: 
       edges: []
@@ -134,19 +191,19 @@ TextureImporter:
       name: fireball
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: db5dfad1414bf774a84496d50da98ddf
-      internalID: -1653603305
+      spriteID: 6ec9442a251f7d300800000000000000
+      internalID: 276955239318592742
       vertices: []
       indices: 
       edges: []
@@ -155,19 +212,19 @@ TextureImporter:
       name: fastpaddle
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3ffb484576879164dbbc1403ae0094d6
-      internalID: -1812229245
+      spriteID: a77e9eb81534c7590800000000000000
+      internalID: -7675185647427393670
       vertices: []
       indices: 
       edges: []
@@ -176,19 +233,19 @@ TextureImporter:
       name: tallerpaddle
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 08e8a44e400e1c542ae12de03fc6fce8
-      internalID: -1655997203
+      spriteID: e8a00d184840c8860800000000000000
+      internalID: 7533401243844086414
       vertices: []
       indices: 
       edges: []
@@ -197,19 +254,19 @@ TextureImporter:
       name: fullheart
       rect:
         serializedVersion: 2
-        x: 64
-        y: 48
-        width: 16
-        height: 16
+        x: 128
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9cbf87ee852ef384296005efad5ba203
-      internalID: 1288285957
+      spriteID: c18e2c38ca06f70f0800000000000000
+      internalID: -1117067888503363556
       vertices: []
       indices: 
       edges: []
@@ -219,18 +276,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 16
-        height: 16
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 931332af2bf73cc44a4c4cc4afb03f01
-      internalID: -983860231
+      spriteID: ac4c6eea66ffc4ce0800000000000000
+      internalID: -1419478966042442550
       vertices: []
       indices: 
       edges: []
@@ -239,19 +296,19 @@ TextureImporter:
       name: miniball
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 658e6a3fedcf2114ea255f9e2547b833
-      internalID: 1156567044
+      spriteID: f4027be4cdf630810800000000000000
+      internalID: 1730349673844514895
       vertices: []
       indices: 
       edges: []
@@ -260,19 +317,19 @@ TextureImporter:
       name: slowpaddle
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 998c9b1d5bd9470479acb21cee12c335
-      internalID: -1693941483
+      spriteID: 3831d0285419e05f0800000000000000
+      internalID: -788533157022592125
       vertices: []
       indices: 
       edges: []
@@ -281,19 +338,19 @@ TextureImporter:
       name: smallpaddle
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8a39b2a349a99b847929542cfb952b8c
-      internalID: 1222139520
+      spriteID: 2c02bef305b75f760800000000000000
+      internalID: 7491029139800662210
       vertices: []
       indices: 
       edges: []
@@ -302,19 +359,19 @@ TextureImporter:
       name: halfheart
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 16
+        x: 128
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1fad10e302ee536449ee2dc7ad56f095
-      internalID: 2116368467
+      spriteID: 9416a712911319750800000000000000
+      internalID: 6309878536928387401
       vertices: []
       indices: 
       edges: []
@@ -324,18 +381,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 16
-        height: 16
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 62de8288b471c8c41b53abb6e2dbf92a
-      internalID: 2006468414
+      spriteID: 0916e688422549730800000000000000
+      internalID: 4004916285500449168
       vertices: []
       indices: 
       edges: []
@@ -344,19 +401,19 @@ TextureImporter:
       name: fatball
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2dc7f570f9747d244806b296b4c8de59
-      internalID: 1557701882
+      spriteID: ef606a7cc5cc794a0800000000000000
+      internalID: -6586571231147456770
       vertices: []
       indices: 
       edges: []
@@ -365,40 +422,40 @@ TextureImporter:
       name: largepaddle
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f6969bfcee1c83a41a30f0737f5e1d5c
-      internalID: -432852897
+      spriteID: 4fa95897e79ccfbe0800000000000000
+      internalID: -1442056235623539980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bouncypaddle
+      name: massivekick
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9ab180f2f52597b459198a3a9a981c8d
-      internalID: -376190142
+      spriteID: 7e98e4c1765b08fc0800000000000000
+      internalID: -3494593856378336793
       vertices: []
       indices: 
       edges: []
@@ -407,61 +464,61 @@ TextureImporter:
       name: slippery
       rect:
         serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
+        x: 128
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6c3c6bd9a69368a4ca81fb4c47bbc1dd
-      internalID: 266990636
+      spriteID: b2c50566fcc28dfb0800000000000000
+      internalID: -4622895748209419221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slowtime
+      name: activeslowtime
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0caf66a73b0d2404d8b9048a7c537886
-      internalID: 1335808469
+      spriteID: 332e28687a7e7f560800000000000000
+      internalID: 7347596023780532787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fasttime
+      name: activefasttime
       rect:
         serializedVersion: 2
-        x: 16
+        x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 73853f969384c0d4e9d6cd7ac57314c1
-      internalID: 1370904856
+      spriteID: aaa7fb449dda72fa0800000000000000
+      internalID: -5825496444307539286
       vertices: []
       indices: 
       edges: []
@@ -470,19 +527,19 @@ TextureImporter:
       name: harnesstime
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5e23bf96c5e255743a8cbb882d11a509
-      internalID: -804123424
+      spriteID: 80d31dc74a22990b0800000000000000
+      internalID: -5721503761733436152
       vertices: []
       indices: 
       edges: []
@@ -491,19 +548,19 @@ TextureImporter:
       name: suddendeath
       rect:
         serializedVersion: 2
-        x: 48
+        x: 96
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f4e4739587433ae41926f5dc5d7a1a52
-      internalID: -1232942333
+      spriteID: b1c3e3dbe712639a0800000000000000
+      internalID: -6253774204332786661
       vertices: []
       indices: 
       edges: []
@@ -512,19 +569,19 @@ TextureImporter:
       name: flipcontrols
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7dd745a124149cf4cb5c5836aa366c88
-      internalID: -1804103361
+      spriteID: 85e0f515b01abd300800000000000000
+      internalID: 277992871995313752
       vertices: []
       indices: 
       edges: []
@@ -532,7 +589,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0f7f1f58a64151e49ae46ebaae3d1d55
+    spriteID: 8a6d797494496104ba52aa1f5998765f
     internalID: 0
     vertices: []
     indices: 
@@ -540,26 +597,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bouncypaddle: -376190142
-      fastball: -983860231
-      fastpaddle: -1812229245
-      fasttime: 1370904856
-      fatball: 1557701882
-      fireball: -1653603305
-      flipcontrols: -1804103361
-      fullheart: 1288285957
-      halfheart: 2116368467
-      harnesstime: -804123424
-      largepaddle: -432852897
-      miniball: 1156567044
-      slippery: 266990636
-      slowball: 2006468414
-      slowpaddle: -1693941483
-      slowtime: 1335808469
-      smallpaddle: 1222139520
-      snailball: 4336937932093799340
-      suddendeath: -1232942333
-      tallerpaddle: -1655997203
+      activefasttime: -5825496444307539286
+      activeslowtime: 7347596023780532787
+      fastball: -1419478966042442550
+      fastpaddle: -7675185647427393670
+      fatball: -6586571231147456770
+      fireball: 276955239318592742
+      flipcontrols: 277992871995313752
+      fullheart: -1117067888503363556
+      halfheart: 6309878536928387401
+      harnesstime: -5721503761733436152
+      largepaddle: -1442056235623539980
+      massivekick: -3494593856378336793
+      miniball: 1730349673844514895
+      slippery: -4622895748209419221
+      slowball: 4004916285500449168
+      slowpaddle: -788533157022592125
+      smallpaddle: 7491029139800662210
+      snailball: -8703816465769904855
+      suddendeath: -6253774204332786661
+      tallerpaddle: 7533401243844086414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

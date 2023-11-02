@@ -49,7 +49,7 @@ MonoBehaviour:
   rarity: 1
   modifierName: Fire Ball
   description: Flaming\nBall.
-  icon: {fileID: -1653603305, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
+  icon: {fileID: 276955239318592742, guid: 7c155d131fb466f41b7ff360f96a98d4, type: 3}
   unique: 2
   activateable: 0
   ballSpeedAdd: 1

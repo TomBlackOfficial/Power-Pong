@@ -47,7 +47,7 @@ MonoBehaviour:
   rarity: 3
   modifierName: Flip Controls
   description: Flip\nControls
-  icon: {fileID: -1804103361, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
+  icon: {fileID: 277992871995313752, guid: 7c155d131fb466f41b7ff360f96a98d4, type: 3}
   unique: 0
   activateable: 0
   playerToAffect: 1

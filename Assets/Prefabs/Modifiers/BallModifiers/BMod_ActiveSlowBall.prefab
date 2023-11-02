@@ -47,7 +47,7 @@ MonoBehaviour:
   rarity: 2
   modifierName: Active Slow Ball
   description: Active\nSlow Ball
-  icon: {fileID: 1335808469, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
+  icon: {fileID: 7347596023780532787, guid: 7c155d131fb466f41b7ff360f96a98d4, type: 3}
   unique: 1
   activateable: 1
   ballSpeedAdd: 0
