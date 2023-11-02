@@ -45,6 +45,12 @@ public class GameManager : MonoBehaviour
     public GameObject cardSelectionScreen;
     public Dictionary<Gamemode.GameType, GameObject> scorePanels = new Dictionary<Gamemode.GameType, GameObject>();
     private List<UIHealthHelperScript> uiHelpers = new List<UIHealthHelperScript>();
+    [SerializeField] private GameObject cardSelectedEffectPrefab;
+    [SerializeField] private float cardSelectedEffectDuration = 2.5f;
+    [SerializeField] private Color rareColour;
+    [SerializeField] private Color legendaryColour;
+    [SerializeField] private Color mysticColour;
+    
 
     private int player1Score;
     private int player2Score;
@@ -204,7 +210,7 @@ public class GameManager : MonoBehaviour
         StartCountdown();
     }
 
-    public void ApplyModifier(GameObject modifier)
+    public void ApplyModifier(GameObject modifier, Vector3 cardSelectedPosition)
     {
         if (modifier.TryGetComponent(out ModifierParent parent))
         {
@@ -269,10 +275,8 @@ public class GameManager : MonoBehaviour
             AddModifier(modifier);
         }
 
-
-        cardSelectionScreen.SetActive(false);
-        CardSelection.instance.gameObject.GetComponent<CustomEventSystem>().StartEventSystem();
-        StartCountdown();
+        StartCoroutine(CardPickedAnimation(cardSelectedPosition, parent.rarity));
+        
     }
 
     private void GameOver(int winnerID)
@@ -280,9 +284,10 @@ public class GameManager : MonoBehaviour
         if (winnerID != 1 && winnerID != 2)
             return;
 
+        WinnerTracking.instance.winner = winnerID;
         currentGameState = GameStates.GameOver;
         Debug.Log("Player " + winnerID + " is the winner!");
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("EndingScreen");
     }
 
     private void ResetPosition()
@@ -439,6 +444,33 @@ public class GameManager : MonoBehaviour
         player2Paddle.SetParalized(true);
         GameObject explosion = Instantiate(goalExplosionPrefab, goalPosition, Quaternion.identity);
         yield return new WaitForSeconds(explosionTime);
+        Destroy(explosion);
         CheckWinCondition();
+    }
+
+    private IEnumerator CardPickedAnimation(Vector3 cardPosition, ModifierParent.ModifierRarity cardRarity)
+    {
+        CustomEventSystem.instance.SetEventSystemActive(false);
+        GameObject effect = Instantiate(cardSelectedEffectPrefab, new Vector3(cardPosition.x, cardPosition.y, -0.5f), Quaternion.identity);
+        switch (cardRarity)
+        {
+            case ModifierParent.ModifierRarity.Rare:
+                effect.GetComponent<ParticleSystem>().startColor = rareColour;
+                break;
+            case ModifierParent.ModifierRarity.Legendary:
+                effect.GetComponent<ParticleSystem>().startColor = legendaryColour;
+                break;
+            case ModifierParent.ModifierRarity.Mystic:
+                effect.GetComponent<ParticleSystem>().startColor = mysticColour;
+                break;
+            default:
+                break;
+        }
+        yield return new WaitForSeconds(cardSelectedEffectDuration);
+        Destroy(effect);
+        CustomEventSystem.instance.SetEventSystemActive(true);
+        cardSelectionScreen.SetActive(false);
+        CardSelection.instance.gameObject.GetComponent<CustomEventSystem>().StartEventSystem();
+        StartCountdown();
     }
 }

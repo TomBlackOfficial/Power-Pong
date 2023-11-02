@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CustomEventSystem : MonoBehaviour
 {
+    public static CustomEventSystem instance;
     public enum SortingModes
     {
         Horizontal,
@@ -24,6 +25,11 @@ public class CustomEventSystem : MonoBehaviour
 
     private void Awake()
     {
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        instance = GetComponent<CustomEventSystem>();
         if (buttons.Length <= 0)
         {
             buttons = GetComponentsInChildren<CustomButton>();
@@ -66,27 +72,43 @@ public class CustomEventSystem : MonoBehaviour
 
     private void UpdateHorizontal()
     {
-        if (GameManager.instance.loser.isPlayer1)
+        if (GameManager.instance != null)
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (GameManager.instance.loser.isPlayer1)
             {
-                MoveBack();
-                return;
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    MoveBack();
+                    return;
+                }
+                else if (Input.GetKeyDown(KeyCode.D))
+                {
+                    MoveNext();
+                    return;
+                }
             }
-            else if (Input.GetKeyDown(KeyCode.D))
+            else
             {
-                MoveNext();
-                return;
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    MoveBack();
+                    return;
+                }
+                else if (Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    MoveNext();
+                    return;
+                }
             }
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 MoveBack();
                 return;
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 MoveNext();
                 return;
@@ -96,27 +118,43 @@ public class CustomEventSystem : MonoBehaviour
 
     private void UpdateVertical()
     {
-        if (GameManager.instance.loser.isPlayer1)
+        if (GameManager.instance != null)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (GameManager.instance.loser.isPlayer1)
             {
-                MoveBack();
-                return;
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    MoveBack();
+                    return;
+                }
+                else if (Input.GetKeyDown(KeyCode.S))
+                {
+                    MoveNext();
+                    return;
+                }
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            else
             {
-                MoveNext();
-                return;
+                if (Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    MoveBack();
+                    return;
+                }
+                else if (Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    MoveNext();
+                    return;
+                }
             }
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 MoveBack();
                 return;
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 MoveNext();
                 return;

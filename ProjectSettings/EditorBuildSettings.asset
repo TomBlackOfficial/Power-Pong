@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tom/Game_Tom.unity
     guid: 4947c40a1b6ec044fb4c89e4a6cf8f52
+  - enabled: 1
+    path: Assets/Scenes/Tom/EndingScreen.unity
+    guid: ad8857c63dcddce45bcfdcf8f1392c07
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

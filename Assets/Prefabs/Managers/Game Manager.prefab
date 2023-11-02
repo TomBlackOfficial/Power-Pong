@@ -202,7 +202,7 @@ MonoBehaviour:
   ballModifiers: []
   ballSlowmodeSpeed: 0.01
   goalExplosionPrefab: {fileID: 1441777817391613718, guid: c72a808766fd1be4ea9d35a6a71abe52, type: 3}
-  explosionTime: 2.5
+  explosionTime: 1.5
   player1Paddle: {fileID: 0}
   player1Goal: {fileID: 0}
   p1Modifier: []
@@ -213,6 +213,11 @@ MonoBehaviour:
   player2Text: {fileID: 0}
   cooldownAnim: {fileID: 5875450827092675899}
   cardSelectionScreen: {fileID: 0}
+  cardSelectedEffectPrefab: {fileID: 6326914723316613356, guid: e5cfe59a0cf43a243a8c9a7b7c9174c5, type: 3}
+  cardSelectedEffectDuration: 0.3
+  rareColour: {r: 0.16078432, g: 0.5882353, b: 1, a: 1}
+  legendaryColour: {r: 0.9490197, g: 0.69803923, b: 0.1764706, a: 1}
+  mysticColour: {r: 0.9490197, g: 0.3137255, b: 0.20000002, a: 1}
 --- !u!114 &5319193525307417449
 MonoBehaviour:
   m_ObjectHideFlags: 0

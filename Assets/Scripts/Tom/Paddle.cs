@@ -68,6 +68,10 @@ public class Paddle : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            movement = 0;
+        }
         if (flipControls)
         {
             movement = -movement;
@@ -123,6 +127,7 @@ public class Paddle : MonoBehaviour
     public void SetParalized(bool paralize)
     {
         paralized = paralize;
+        rb.velocity = new Vector2(0, 0);
     }
 
     public void SetSpeed(float newSpeed)

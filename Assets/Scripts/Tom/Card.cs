@@ -41,6 +41,6 @@ public class Card : MonoBehaviour
 
     public void SelectModifier()
     {
-        GameManager.instance.ApplyModifier(modifier);
+        GameManager.instance.ApplyModifier(modifier, this.transform.position);
     }
 }

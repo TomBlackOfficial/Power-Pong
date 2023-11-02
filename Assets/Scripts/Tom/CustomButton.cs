@@ -54,35 +54,51 @@ public class CustomButton : MonoBehaviour
     {
         if (!interactable)
             return;
-        if (GameManager.instance.loser.isPlayer1)
+        if (GameManager.instance != null)
         {
-            if (Input.GetButtonDown("Action_P1") && highlighted)
+            if (GameManager.instance.loser.isPlayer1)
             {
-                onClickDown.Invoke();
-                pressed = true;
+                if (Input.GetButtonDown("Action_P1") && highlighted)
+                {
+                    onClickDown.Invoke();
+                    pressed = true;
+                }
+                else if (Input.GetButtonUp("Action_P1") && highlighted)
+                {
+                    onClickUp.Invoke();
+                    pressed = false;
+                    selected = true;
+                }
             }
-            else if (Input.GetButtonUp("Action_P1") && highlighted)
+            else
             {
-                onClickUp.Invoke();
-                pressed = false;
-                selected = true;
+                if (Input.GetButtonDown("Action_P2") && highlighted)
+                {
+                    onClickDown.Invoke();
+                    pressed = true;
+                }
+                else if (Input.GetButtonUp("Action_P2") && highlighted)
+                {
+                    onClickUp.Invoke();
+                    pressed = false;
+                    selected = true;
+                }
             }
         }
         else
         {
-            if (Input.GetButtonDown("Action_P2") && highlighted)
+            if (Input.GetButtonDown("Action") && highlighted)
             {
                 onClickDown.Invoke();
                 pressed = true;
             }
-            else if (Input.GetButtonUp("Action_P2") && highlighted)
+            else if (Input.GetButtonUp("Action") && highlighted)
             {
                 onClickUp.Invoke();
                 pressed = false;
                 selected = true;
             }
         }
-
         CalculateCurrentState();
     }
 
