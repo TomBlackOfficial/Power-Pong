@@ -456,7 +456,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator CardPickedAnimation(Vector3 cardPosition, ModifierParent.ModifierRarity cardRarity)
     {
         CustomEventSystem.instance.SetEventSystemActive(false);
-        GameObject effect = Instantiate(cardSelectedEffectPrefab, new Vector3(cardPosition.x, cardPosition.y, -0.5f), Quaternion.identity);
+        GameObject effect = Instantiate(cardSelectedEffectPrefab, new Vector3(cardPosition.x, cardPosition.y, -0.1f), Quaternion.identity);
         switch (cardRarity)
         {
             case ModifierParent.ModifierRarity.Rare:

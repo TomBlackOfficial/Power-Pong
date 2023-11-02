@@ -621,6 +621,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
+      propertyPath: cardSelectedEffectDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: 'ballModifiers.Array.data[0]'
       value: 
       objectReference: {fileID: 4939051390042414249, guid: df86f6f1d7fefe046bae3b062fe2cb6d, type: 3}
