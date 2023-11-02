@@ -175,6 +175,15 @@ public class CustomEventSystem : MonoBehaviour
             selectedButton.SetHighlighted(true);
     }
 
+    public void SetEventSystemActive(bool newIsActive)
+    {
+        isActive = newIsActive;
+        foreach (CustomButton button in buttons)
+        {
+            button.interactable = newIsActive;
+        }
+    }
+
     private void BadInput()
     {
 
