@@ -47,9 +47,10 @@ public class GameManager : MonoBehaviour
     private List<UIHealthHelperScript> uiHelpers = new List<UIHealthHelperScript>();
     [SerializeField] private GameObject cardSelectedEffectPrefab;
     [SerializeField] private float cardSelectedEffectDuration = 2.5f;
-    [SerializeField] private Color rareColour;
-    [SerializeField] private Color legendaryColour;
-    [SerializeField] private Color mysticColour;
+    public Color commonColour;
+    public Color rareColour;
+    public Color legendaryColour;
+    public Color mysticColour;
     
 
     private int player1Score;
@@ -459,6 +460,9 @@ public class GameManager : MonoBehaviour
         GameObject effect = Instantiate(cardSelectedEffectPrefab, new Vector3(cardPosition.x, cardPosition.y, -0.1f), Quaternion.identity);
         switch (cardRarity)
         {
+            case ModifierParent.ModifierRarity.Common:
+                effect.GetComponent<ParticleSystem>().startColor = commonColour;
+                break;
             case ModifierParent.ModifierRarity.Rare:
                 effect.GetComponent<ParticleSystem>().startColor = rareColour;
                 break;

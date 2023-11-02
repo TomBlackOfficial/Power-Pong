@@ -621,10 +621,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
-      propertyPath: cardSelectedEffectDuration
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 844492361283906798, guid: 5122cd34481874799b3e6605dfc46521, type: 3}
       propertyPath: 'ballModifiers.Array.data[0]'
       value: 
       objectReference: {fileID: 4939051390042414249, guid: df86f6f1d7fefe046bae3b062fe2cb6d, type: 3}
@@ -776,10 +772,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1155773295446299811, guid: ffa766089cfa73d4aa567d47a6b9df2f, type: 3}
-      propertyPath: rareCardSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7ac9ce523d0a1494db70f6fc8ea2b252, type: 3}
     - target: {fileID: 1192368904969236094, guid: ffa766089cfa73d4aa567d47a6b9df2f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1004,19 +996,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.20000002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.055555556
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6321324811419032018, guid: 38e288c365b4d4cb283ec70d24b1dbcf, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.8888889
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

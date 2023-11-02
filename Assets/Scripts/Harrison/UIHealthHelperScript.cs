@@ -9,6 +9,7 @@ public class UIHealthHelperScript : MonoBehaviour
     [SerializeField] private bool player1 = true;
     [SerializeField] private Sprite fullHeart;
     [SerializeField] private Sprite halfHeart;
+    [SerializeField] private Sprite emptyHeart;
 
     private void Awake()
     {
@@ -39,7 +40,6 @@ public class UIHealthHelperScript : MonoBehaviour
         int tempHP = health;
         for (int s = 0; s < heartSprites.Length; s++)
         {
-            heartSprites[s].gameObject.SetActive(true);
             heartSprites[s].flipX = false;
             if (tempHP >= 2)
             {
@@ -55,7 +55,7 @@ public class UIHealthHelperScript : MonoBehaviour
             }
             else
             {
-                heartSprites[s].gameObject.SetActive(false);
+                heartSprites[s].sprite = emptyHeart;
             }
             tempHP -= 2;
         }

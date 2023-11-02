@@ -214,10 +214,11 @@ MonoBehaviour:
   cooldownAnim: {fileID: 5875450827092675899}
   cardSelectionScreen: {fileID: 0}
   cardSelectedEffectPrefab: {fileID: 6326914723316613356, guid: e5cfe59a0cf43a243a8c9a7b7c9174c5, type: 3}
-  cardSelectedEffectDuration: 0.3
+  cardSelectedEffectDuration: 1
+  commonColour: {r: 0.4431373, g: 0.7294118, b: 0.10196079, a: 1}
   rareColour: {r: 0.16078432, g: 0.5882353, b: 1, a: 1}
-  legendaryColour: {r: 0.9490197, g: 0.69803923, b: 0.1764706, a: 1}
-  mysticColour: {r: 0.9490197, g: 0.3137255, b: 0.20000002, a: 1}
+  legendaryColour: {r: 0.6431373, g: 0.32941177, b: 0.8980393, a: 1}
+  mysticColour: {r: 0.9450981, g: 0.2901961, b: 0.08627451, a: 1}
 --- !u!114 &5319193525307417449
 MonoBehaviour:
   m_ObjectHideFlags: 0

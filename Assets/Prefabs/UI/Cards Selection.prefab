@@ -206,10 +206,10 @@ MonoBehaviour:
   cards:
   - {fileID: 203188932336042133}
   - {fileID: 7361234744958008226}
-  commonCardSprite: {fileID: -697111671, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
-  rareCardSprite: {fileID: 79756511, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
-  legendaryCardSprite: {fileID: -2037818055, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
-  mythicCardSprite: {fileID: 1136609717, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
+  commonCardSprite: {fileID: 1404828447, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
+  rareCardSprite: {fileID: 836330944, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
+  legendaryCardSprite: {fileID: -1987942827, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
+  mythicCardSprite: {fileID: 1099755134, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
 --- !u!1 &7944643289151499539
 GameObject:
   m_ObjectHideFlags: 0
