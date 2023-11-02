@@ -47,7 +47,7 @@ MonoBehaviour:
   rarity: 3
   modifierName: Sudden Death
   description: Sudden\nDeath
-  icon: {fileID: -1232942333, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
+  icon: {fileID: -6253774204332786661, guid: 7c155d131fb466f41b7ff360f96a98d4, type: 3}
   unique: 2
   activateable: 0
   manager: {fileID: 0}

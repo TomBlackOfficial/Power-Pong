@@ -47,7 +47,7 @@ MonoBehaviour:
   rarity: 1
   modifierName: Snail Ball
   description: Snail\nBall..
-  icon: {fileID: 4336937932093799340, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
+  icon: {fileID: -8703816465769904855, guid: 7c155d131fb466f41b7ff360f96a98d4, type: 3}
   unique: 0
   activateable: 0
   ballSpeedAdd: 0

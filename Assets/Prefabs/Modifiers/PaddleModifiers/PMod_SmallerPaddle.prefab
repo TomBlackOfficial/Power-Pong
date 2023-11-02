@@ -47,7 +47,7 @@ MonoBehaviour:
   rarity: 0
   modifierName: Smaller Paddle
   description: Smaller\nPaddle.
-  icon: {fileID: 1222139520, guid: 1604f0c90d0c7b445a529ec3997170ca, type: 3}
+  icon: {fileID: 7491029139800662210, guid: 7c155d131fb466f41b7ff360f96a98d4, type: 3}
   unique: 0
   activateable: 0
   playerToAffect: 1
