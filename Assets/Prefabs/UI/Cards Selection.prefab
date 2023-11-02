@@ -206,10 +206,10 @@ MonoBehaviour:
   cards:
   - {fileID: 203188932336042133}
   - {fileID: 7361234744958008226}
-  commonCardSprite: {fileID: 1404828447, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
-  rareCardSprite: {fileID: 836330944, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
-  legendaryCardSprite: {fileID: -1987942827, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
-  mythicCardSprite: {fileID: 1099755134, guid: 82d17472f09245f4e8dbbac85393a472, type: 3}
+  commonCardSprite: {fileID: -814799153993636562, guid: a3face08435d1084bb661297ed139baf, type: 3}
+  rareCardSprite: {fileID: 503621099550169793, guid: a3face08435d1084bb661297ed139baf, type: 3}
+  legendaryCardSprite: {fileID: 5760741154877363078, guid: a3face08435d1084bb661297ed139baf, type: 3}
+  mythicCardSprite: {fileID: 3491699038157088347, guid: a3face08435d1084bb661297ed139baf, type: 3}
 --- !u!1 &7944643289151499539
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +393,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4058871175029250401, guid: 52f0bed77b2eaa24b91d6fc6146c1759, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -477,7 +478,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4058871175029250401, guid: 52f0bed77b2eaa24b91d6fc6146c1759, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
