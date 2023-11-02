@@ -116,7 +116,10 @@ public class GameManager : MonoBehaviour
 
     public void PlayerScored(int playerID)
     {
-        AudioManager.instance.PlayScoreSound();
+        if(AudioManager.instance)
+        {
+            AudioManager.instance.PlayScoreSound();
+        }
 
         if (playerID != 1 && playerID != 2)
             return;

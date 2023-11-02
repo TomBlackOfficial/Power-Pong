@@ -56,10 +56,51 @@ public class CustomButton : MonoBehaviour
             return;
         if (GameManager.instance.loser.isPlayer1)
         {
-            if (Input.GetButtonDown("Action_P1") && highlighted)
+            if (GameManager.instance.loser.isPlayer1)
+            {
+                if (Input.GetButtonDown("Action_P1") && highlighted)
+                {
+                    onClickDown.Invoke();
+                    pressed = true;
+                }
+                else if (Input.GetButtonUp("Action_P1") && highlighted)
+                {
+                    onClickUp.Invoke();
+                    pressed = false;
+                    selected = true;
+
+                    if (AudioManager.instance)
+                    {
+                        AudioManager.instance.PlayLaunchSound();
+                    }
+                }
+            }
+            else
+            {
+                if (Input.GetButtonDown("Action_P2") && highlighted)
+                {
+                    onClickDown.Invoke();
+                    pressed = true;
+                }
+                else if (Input.GetButtonUp("Action_P2") && highlighted)
+                {
+                    onClickUp.Invoke();
+                    pressed = false;
+                    selected = true;
+
+                    if (AudioManager.instance)
+                    {
+                        AudioManager.instance.PlayLaunchSound();
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (Input.GetButtonDown("Action") && highlighted)
             {
                 onClickDown.Invoke();
-                pressed = true;
+                pressed = true;                
             }
             else if (Input.GetButtonUp("Action_P1") && highlighted)
             {
@@ -67,8 +108,10 @@ public class CustomButton : MonoBehaviour
                 pressed = false;
                 selected = true;
 
-                if(AudioManager.instance)
-                AudioManager.instance.PlayLaunchSound();
+                if (AudioManager.instance)
+                {
+                    AudioManager.instance.PlayLaunchSound();
+                }
             }
         }
         else
