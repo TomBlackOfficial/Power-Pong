@@ -269,6 +269,7 @@ public class GameManager : MonoBehaviour
             AddModifier(modifier);
         }
 
+
         cardSelectionScreen.SetActive(false);
         CardSelection.instance.gameObject.GetComponent<CustomEventSystem>().StartEventSystem();
         StartCountdown();
