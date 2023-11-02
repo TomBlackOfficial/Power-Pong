@@ -36,13 +36,16 @@ public class CustomButton : MonoBehaviour
     private bool pressed;
     private bool selected;
 
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private TextMesh textMesh;
     private Animator anim;
 
     private void Awake()
     {
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
         textMesh = GetComponentInChildren<TextMesh>();
         TryGetComponent(out anim);
 
