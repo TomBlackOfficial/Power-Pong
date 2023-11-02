@@ -22,7 +22,8 @@ public class GameManager : MonoBehaviour
     [Header("Ball")]
     [SerializeField] private Ball ballPrefab;
     [HideInInspector] public Ball ball;
-    [SerializeField] private List<GameObject> ballModifiers = new List<GameObject>();
+    [SerializeField] private List<GameObject> ballStartingModifiers = new List<GameObject>();
+    [SerializeField] private Dictionary<GameObject, Paddle> ballModifiers = new Dictionary<GameObject, Paddle>();
     private bool firstLaunch = true;
     [SerializeField] private float ballSlowmodeSpeed = 0.01f;
     [SerializeField] private GameObject goalExplosionPrefab;
@@ -258,7 +259,15 @@ public class GameManager : MonoBehaviour
 
         if (modifier.TryGetComponent(out BallModifier ballModifierScript))
         {
-            ballModifiers.Add(modifier);
+            Paddle player = player1Paddle;
+            if (ballModifierScript.needsPlayerAssignment)
+            {
+                if (!loser.isPlayer1)
+                {
+                    player = player2Paddle;
+                }
+            }
+            ballModifiers.Add(modifier, player);
         }
         else if (modifier.TryGetComponent(out PlayerModifier playerModifierScript))
         {
@@ -331,9 +340,9 @@ public class GameManager : MonoBehaviour
         {
             ball.firstLaunch = firstLaunch;
         }
-        for (int b = 0; b < ballModifiers.Count; b++)
+        foreach (GameObject key in ballModifiers.Keys)
         {
-            ball.AddModifier(ballModifiers[b], player1Paddle);
+            ball.AddModifier(key, ballModifiers[key]);
         }
     }
 

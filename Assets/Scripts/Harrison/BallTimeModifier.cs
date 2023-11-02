@@ -23,7 +23,7 @@ public class BallTimeModifier : BallModifier
         base.InitializeValues();
         baseSpeed = myBall.speed;
         direction = 1;
-        if (myPlayer.isPlayer1)
+        if (!myPlayer.isPlayer1)
         {
             direction = -1;
         }
