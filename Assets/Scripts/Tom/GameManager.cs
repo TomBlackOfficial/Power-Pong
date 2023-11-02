@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public Ball ball;
     [SerializeField] private List<GameObject> ballModifiers = new List<GameObject>();
     private bool firstLaunch = true;
+    [SerializeField] private float ballSlowmodeSpeed = 0.01f;
+    [SerializeField] private GameObject goalExplosionPrefab;
+    [SerializeField] private float explosionTime = 2.5f;
 
     [Header("Player 1")]
     public Paddle player1Paddle;
@@ -149,7 +152,7 @@ public class GameManager : MonoBehaviour
         }
         // Checking which player won the round
 
-        CheckWinCondition();
+        StartCoroutine(GoalAnimation());
     }
 
     private void CheckWinCondition()
@@ -424,5 +427,17 @@ public class GameManager : MonoBehaviour
         }
         mod.InitializeValues();
         mod.StartModifierEffect();
+    }
+
+    private IEnumerator GoalAnimation()
+    {
+        Vector3 goalPosition = ball.transform.position;
+        Rigidbody2D ballRB = ball.GetComponent<Rigidbody2D>();
+        ballRB.velocity = ballRB.velocity.normalized * ballSlowmodeSpeed;
+        player1Paddle.SetParalized(true);
+        player2Paddle.SetParalized(true);
+        GameObject explosion = Instantiate(goalExplosionPrefab, goalPosition, Quaternion.identity);
+        yield return new WaitForSeconds(explosionTime);
+        CheckWinCondition();
     }
 }

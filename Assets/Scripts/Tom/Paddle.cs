@@ -120,6 +120,11 @@ public class Paddle : MonoBehaviour
         paralized = false;
     }
 
+    public void SetParalized(bool paralize)
+    {
+        paralized = paralize;
+    }
+
     public void SetSpeed(float newSpeed)
     {
         speed = Mathf.Clamp(newSpeed, minMaxSpeed.x, minMaxSpeed.y);
